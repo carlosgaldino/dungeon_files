@@ -10,5 +10,5 @@ Icon?
 .Trashes
 
 # Temp and swap
-*.swp
+.*.swp
 *~
