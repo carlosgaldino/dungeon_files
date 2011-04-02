@@ -1,0 +1,13 @@
+export EDITOR="mvim -f"
+
+# RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+[[ -r $rvm_path/scripts/completion ]] && . $rvm_path/scripts/completion # completion
+# PS1 config
+[[ -s "$HOME/.rvm/contrib/ps1_functions" ]] && source "$HOME/.rvm/contrib/ps1_functions"
+ps1_set --prompt ∴
+
+# homebrew completion
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi
