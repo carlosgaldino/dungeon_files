@@ -3,3 +3,5 @@
 	email = carloshsgaldino@gmail.com
 [color]
 	ui = auto
+[core]
+	excludesfile = /Users/carlosgaldino/.gitignore
