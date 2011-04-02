@@ -12,7 +12,7 @@ alias cdd='cd -' # return to last directory
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-alias e='mvim'
+alias e=$EDITOR
 
 # ls with colors
 if ls --color -d . >/dev/null 2>&1; then
