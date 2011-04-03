@@ -12,3 +12,5 @@ Icon?
 # Temp and swap
 .*.swp
 *~
+
+.rvmrc
