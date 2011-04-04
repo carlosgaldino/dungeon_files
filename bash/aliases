@@ -1,6 +1,7 @@
 # Dirs
 alias h="cd ~"
 alias o="open ."
+alias code="cd ~/Documents/workspace/"
 
 # Config
 alias reload='source ~/.bash_profile && echo "sourced ~/.bash_profile"'
