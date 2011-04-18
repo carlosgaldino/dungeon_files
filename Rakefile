@@ -29,7 +29,26 @@ task :install do
       end
     end
 
-    FileUtils.ln_s(source, destination)
-    info_cmd "ln -s #{source} #{destination}"
+    contents = File.read(source) rescue ""
+
+    if contents.include?('<.replace ')
+      info "#{source} has <.replace> placeholders."
+
+      contents.gsub!(/<.replace (.+?)>/) {
+        begin
+          File.read(File.expand_path("~/.#{$1}"))
+        rescue => e
+          error "Could not replace `#{$&}`: #{e.message}"
+          ""
+        end
+      }
+
+      File.open(destination, 'w') {|f| f.write contents }
+      info_cmd "wrote file #{destination}"
+    else
+      FileUtils.ln_s(source, destination)
+      info_cmd "ln -s #{source} #{destination}"
+    end
+
   end
 end

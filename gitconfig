@@ -5,3 +5,6 @@
 	ui = auto
 [core]
 	excludesfile = /Users/carlosgaldino/.gitignore
+[github]
+	user = carlosgaldino
+        token = <.replace github-token>
