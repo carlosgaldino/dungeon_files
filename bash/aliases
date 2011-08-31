@@ -2,6 +2,7 @@
 alias h="cd ~"
 alias o="open ."
 alias code="cd ~/Documents/workspace/"
+alias dgn='cd ~/.dungeon_files'
 
 # Config
 alias reload='source ~/.bash_profile && echo "sourced ~/.bash_profile"'
@@ -16,7 +17,6 @@ alias ....='cd ../../..'
 alias e=$EDITOR
 alias grep='grep --color=auto'
 alias vi='mvim -v'
-alias dgn='cd ~/.dungeon_files'
 
 # ls with colors
 if ls --color -d . >/dev/null 2>&1; then
