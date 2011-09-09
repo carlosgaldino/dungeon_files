@@ -5,6 +5,7 @@
 	ui = auto
 [core]
 	excludesfile = /Users/carlosgaldino/.gitignore
+        editor = mvim -f
 [github]
 	user = carlosgaldino
 	token = <.replace github-token>
