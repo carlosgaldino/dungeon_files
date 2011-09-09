@@ -1,1 +1,4 @@
 set completion-ignore-case on
+
+# show tab-completion options at first <tab>
+set show-all-if-ambiguous on
