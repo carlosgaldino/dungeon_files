@@ -13,7 +13,7 @@ let mapleader = ","
 " clear search results
 nnoremap <Leader><Space> :noh<CR>
 
-set guifont=Monaco:h12
+set guifont=Monaco:h13
 
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
 map <Leader>e :e %%
