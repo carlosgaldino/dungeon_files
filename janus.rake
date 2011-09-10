@@ -7,3 +7,6 @@ vim_plugin_task "snipmate-snippets", "git://github.com/akitaonrails/snipmate-sni
     File.delete(snippet) if Dir.exist?(snippet.chomp(".snippets"))
   end
 end
+
+vim_plugin_task "vim-repeat", "git://github.com/tpope/vim-repeat.git"
+vim_plugin_task "zencoding", "git://github.com/mattn/zencoding-vim.git"
