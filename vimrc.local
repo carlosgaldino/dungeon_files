@@ -1,4 +1,4 @@
-colorscheme vibrantink
+colorscheme molokai
 
 " highlight column 80
 set colorcolumn=80
