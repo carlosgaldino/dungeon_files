@@ -29,7 +29,7 @@ map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 " config status line
 set statusline=%f " tail of the filename
 set statusline+=%{fugitive#statusline()} " git
-set statusline+=%{exists('g:loaded_rvm')?\ rvm#statusline():''} " RVM
+set statusline+=%{exists('g:loaded_rvm')?rvm#statusline():''} " RVM
 set statusline+=%h " help file flag
 set statusline+=%m " modified flag
 set statusline+=%r " read-only flag
