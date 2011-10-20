@@ -2,7 +2,7 @@ colorscheme molokai
 
 hi ColorColumn guibg=#403D3D
 
-nnoremap <Leader>tf :CommandTFlush<CR>
+map <D-t> :CommandTFlush<CR>\|:CommandT<CR>
 
 " remove scrollbar
 set guioptions-=rL
