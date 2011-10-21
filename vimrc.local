@@ -43,3 +43,5 @@ nmap <D-[> <<
 nmap <D-]> >>
 vmap <D-[> <gv
 vmap <D-]> >gv
+
+set spell spelllang=en_us
