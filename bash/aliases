@@ -1,7 +1,7 @@
 # Dirs
 alias h="cd ~"
 alias o="open ."
-alias code="cd ~/Documents/workspace/"
+alias code="cd ~/code"
 alias dgn='cd ~/.dungeon_files'
 
 # Config
@@ -16,7 +16,6 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias e=$EDITOR
 alias grep='grep --color=auto'
-alias vi='mvim -v'
 
 # ls with colors
 if ls --color -d . >/dev/null 2>&1; then
@@ -42,3 +41,5 @@ alias got="git checkout -"
 alias gom="git checkout master"
 alias gr="git branch -d"
 alias grr="git branch -D"
+alias ptec="git config --local user.email carlos.galdino@plataformatec.com.br"
+alias me="git config --local user.email carloshsgaldino@gmail.com"
