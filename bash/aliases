@@ -34,6 +34,7 @@ alias gc="git commit -a -m"
 alias gco="git commit -m"  # "only"
 alias gca="git add . && git commit -a -m"  # "all"
 alias gp='git push'
+alias gpl='git pull'
 alias gpp='git pull && git push'
 alias go="git checkout"
 alias gb="git checkout -b"
