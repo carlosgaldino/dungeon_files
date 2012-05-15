@@ -44,3 +44,10 @@ alias gr="git branch -d"
 alias grr="git branch -D"
 alias ptec="git config --local user.email carlos.galdino@plataformatec.com.br"
 alias me="git config --local user.email carloshsgaldino@gmail.com"
+
+# bundler
+alias b="bundle"
+alias bi="b install --binstubs=b --path vendor"
+alias bu="b update"
+alias be="b exec"
+alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
