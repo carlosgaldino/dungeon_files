@@ -25,7 +25,7 @@ elif ls -G -d . >/dev/null 2>&1; then
 fi
 
 # Git
-alias gl="git log"
+alias gl="source ~/.githelpers && pretty_git_log"
 alias gs="git status"
 alias gw="git show"
 alias gd="git diff"  # What's changed but not yet added?
