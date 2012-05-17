@@ -1,8 +1,8 @@
-nnoremap <silent> <Leader><Space> :noh<CR>
+nnoremap <CR> :noh<CR>
 
 " editing -- see vimcasts#14
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
-map <Leader>e :e %%
+map <Leader>ew :e %%
 map <Leader>es :sp %%
 map <Leader>ev :vsp %%
 map <Leader>et :tabe %%
@@ -37,3 +37,21 @@ nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" MULTIPURPOSE TAB KEY
+" " Indent if we're at the beginning of a line. Else, do completion.
+" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+function! InsertTabWrapper()
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] !~ '\k'
+    return "\<tab>"
+  else
+    return "\<c-p>"
+  endif
+endfunction
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-n>"
+
+" Insert a hash rocket with <c-l>
+imap <c-l> <space>=><space>
