@@ -14,4 +14,5 @@ if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
 fi
 
+eval "$(hub alias -s)"
 eval "$(rbenv init -)"
