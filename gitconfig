@@ -6,6 +6,3 @@
 [core]
 	excludesfile = /Users/carlosgaldino/.gitignore
   editor = vim
-[github]
-	user = carlosgaldino
-	token = <.replace github-token>
