@@ -40,3 +40,6 @@
 [submodule "vim/bundle/buffergator"]
 	path = vim/bundle/buffergator
 	url = git://github.com/jeetsukumaran/vim-buffergator.git
+[submodule "vim/bundle/NrrwRgn"]
+	path = vim/bundle/NrrwRgn
+	url = git://github.com/chrisbra/NrrwRgn.git
