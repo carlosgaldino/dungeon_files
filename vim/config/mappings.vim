@@ -61,3 +61,6 @@ nmap <silent> <leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>}
 
 " format the entire file
 nmap <leader>fef mqggVG=`q
+
+" reload the config
+nmap <leader>r :so $MYVIMRC\|:noh<CR>
