@@ -13,5 +13,11 @@ Icon?
 .*.swp
 *~
 
-.rvmrc
+.rbenv-version
 .idea
+
+# bundler
+vendor/ruby
+vendor/jruby
+vendor/rbx
+.bundle
