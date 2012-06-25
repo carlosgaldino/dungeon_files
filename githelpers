@@ -49,10 +49,10 @@ parse_git_branch() {
   local status=""
 
   if $(echo "$index" | grep '^??' &>/dev/null); then
-    status="%$status"
+    status="?$status"
   fi
 
-  if $(echo "$index" | grep '^.*D' &>/dev/null); then
+  if $(echo "$index" | grep '^M?D' &>/dev/null); then
     status="-$status"
   fi
 
