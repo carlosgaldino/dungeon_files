@@ -2,3 +2,7 @@ set completion-ignore-case on
 
 # show tab-completion options at first <tab>
 set show-all-if-ambiguous on
+
+# CTRL + left/right
+"\e[1;5D": backward-word
+"\e[1;5C": forward-word
