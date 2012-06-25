@@ -56,9 +56,6 @@ inoremap <s-tab> <c-n>"
 " Insert a hash rocket with <c-l>
 imap <c-l> <space>=><space>
 
-" find merge conflict markers
-nmap <silent> <leader>fc <ESC>/\v^[<=>]{7}( .*\|$)<CR>}
-
 " format the entire file
 nmap <leader>fef mqggVG=`q
 
