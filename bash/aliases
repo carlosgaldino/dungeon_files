@@ -42,6 +42,7 @@ alias got="git checkout -"
 alias gom="git checkout master"
 alias gr="git branch -d"
 alias grr="git branch -D"
+alias gfix="git commit --amend -C HEAD"
 alias ptec="git config --local user.email carlos.galdino@plataformatec.com.br"
 alias me="git config --local user.email carloshsgaldino@gmail.com"
 
