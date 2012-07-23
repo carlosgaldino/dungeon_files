@@ -2,3 +2,8 @@
 function mkcd {
   mkdir -p "$1" && cd "$1"
 }
+
+# Get the ruby version name using rbenv
+function rb-version {
+  rbenv version-name 2>/dev/null
+}
