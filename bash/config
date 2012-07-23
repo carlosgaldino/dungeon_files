@@ -24,3 +24,5 @@ fi
 
 eval "$(hub alias -s)"
 eval "$(rbenv init -)"
+
+complete -o default -o nospace -F _git g

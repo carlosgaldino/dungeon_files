@@ -25,24 +25,7 @@ elif ls -G -d . >/dev/null 2>&1; then
 fi
 
 # Git
-alias gl="pretty_git_log"
-alias gs="git status"
-alias gw="git show"
-alias gd="git diff"  # What's changed but not yet added?
-alias gdc="git diff --cached"  # What's added but not yet committed?
-alias gc="git commit -a -v"
-alias gco="git commit -v"  # "only"
-alias gca="git add . && git commit -a -v"  # "all"
-alias gp='git push'
-alias gpl='git pull'
-alias gpp='git pull && git push'
-alias go="git checkout"
-alias gb="git checkout -b"
-alias got="git checkout -"
-alias gom="git checkout master"
-alias gr="git branch -d"
-alias grr="git branch -D"
-alias gfix="git commit --amend -C HEAD"
+alias g="git"
 alias ptec="git config --local user.email carlos.galdino@plataformatec.com.br"
 alias me="git config --local user.email carloshsgaldino@gmail.com"
 
