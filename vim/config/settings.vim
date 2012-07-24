@@ -9,7 +9,7 @@ set number         " show line numbers
 set colorcolumn=80 " highlight column 80
 set ruler          " show line and column number
 set encoding=utf-8 " default enconding to UTF-8
-colorscheme molokai
+colorscheme Tomorrow-Night-Eighties
 
 """""
 "" whitespaces
