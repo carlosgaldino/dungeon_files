@@ -17,6 +17,7 @@
   ff = merge --ff-only
   noff = merge --no-ff
   fix = commit --amend -C HEAD
+  pom = push origin master
 
   # Fancy logging.
   #   h = head
