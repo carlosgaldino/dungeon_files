@@ -11,3 +11,5 @@ let g:gist_post_private = 1
 set wildignore+=*/.hg/*,*/.svn/*,*.so,*/b/*
 let g:ctrlp_custom_ignore = '\.git/*\|vendor/ruby/*'
 let g:ctrlp_dotfiles = 0
+
+let g:vimclojure#ParenRainbow = 1
