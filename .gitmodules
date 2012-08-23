@@ -58,3 +58,6 @@
 [submodule "vim/bundle/clojure"]
 	path = vim/bundle/clojure
 	url = git://github.com/vim-scripts/VimClojure.git
+[submodule "vim/bundle/rtf_pygmentize"]
+	path = vim/bundle/rtf_pygmentize
+	url = git://github.com/rafaelfranca/rtf_pygmentize.git
