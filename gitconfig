@@ -8,7 +8,7 @@
   editor = vim
 [alias]
   st = status
-  ci = commit
+  ci = commit -v
   co = checkout
   di = diff
   dc = diff --cached
