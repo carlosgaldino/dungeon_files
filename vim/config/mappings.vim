@@ -1,5 +1,11 @@
 nnoremap <CR> :noh<CR>
 
+" disable arrow keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+
 " editing -- see vimcasts#14
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
 map <Leader>ew :e %%
