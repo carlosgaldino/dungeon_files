@@ -7,6 +7,9 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
+" save protected files after opening them
+cmap w!! w !sudo tee % >/dev/null
+
 " editing -- see vimcasts#14
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
 map <Leader>ew :e %%
