@@ -1,4 +1,5 @@
 nnoremap <CR> :noh<CR>
+nnoremap ; :
 
 " disable arrow keys
 map <up> <nop>
