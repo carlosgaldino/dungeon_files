@@ -7,3 +7,8 @@ function mkcd {
 function rb-version {
   rbenv version-name 2>/dev/null
 }
+
+# Configure post-commit hook to take a photo
+function gimage() {
+ cp ~/.post-commit-image .git/hooks/post-commit
+}
