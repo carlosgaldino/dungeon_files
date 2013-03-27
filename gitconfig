@@ -34,5 +34,7 @@
   ra = !git r --all
   l = "!source ~/.githelpers && pretty_git_log"
   la = !git l --all
+
+  showless = "!sh -c 'git show --color=always $1 | less -R' -"
 [github]
 	user = carlosgaldino
