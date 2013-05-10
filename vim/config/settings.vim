@@ -58,3 +58,6 @@ set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
 ":h last-position-jump
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
+" wrap text at 80 characters
+au BufRead,BufNewFile *.md setlocal textwidth=80
