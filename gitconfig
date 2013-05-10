@@ -38,3 +38,5 @@
   showless = "!sh -c 'git show --color=always $1 | less -R' -"
 [github]
 	user = carlosgaldino
+[push]
+	default = upstream
