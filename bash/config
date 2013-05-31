@@ -18,16 +18,16 @@ CDPATH=.:~:~/code
 export PS1='\[\033[0;34m\]\h\[\033[1;33m\]:\w\[\033[1;35m\]`git_ps1` \[\033[1;30m\]`rb-version` \[\033[1;37m\]\$\[\033[0m\] '
 PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 
-# bash completion
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
-fi
+# boxen
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
 
 # autojump
 [[ -f `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
-# boxen
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+# bash completion
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
+fi
 
 eval "$(hub alias -s)"
 eval "$(rbenv init -)"
