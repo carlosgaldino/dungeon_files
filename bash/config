@@ -26,6 +26,9 @@ fi
 # autojump
 [[ -f `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
+# boxen
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
+
 eval "$(hub alias -s)"
 eval "$(rbenv init -)"
 
