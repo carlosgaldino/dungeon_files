@@ -16,7 +16,7 @@
   aa = add --all
   au = add -u
   ff = merge --ff-only
-  noff = merge --no-ff
+  noff = merge --no-ff --no-edit
   fix = commit --amend -C HEAD
   pom = push origin master
 
