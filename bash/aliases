@@ -3,6 +3,7 @@ alias h="cd ~"
 alias o="open ."
 alias code="cd ~/code"
 alias dgn='cd ~/.dungeon_files'
+alias src='cd ~/src' # boxen
 
 # Config
 alias reload='source ~/.bash_profile && echo "sourced ~/.bash_profile"'
