@@ -61,3 +61,6 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 " wrap text at 80 characters
 au BufRead,BufNewFile *.md setlocal textwidth=80
+
+" Disable autoindent when pasting
+set pastetoggle=<F2>
