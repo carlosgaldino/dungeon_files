@@ -59,3 +59,7 @@ function extract() {
         echo "'$1' is not a valid file"
     fi
 }
+
+function restore() {
+  mongorestore --port $MONGODB_PORT --drop --noIndexRestore --db $1 $2
+}
