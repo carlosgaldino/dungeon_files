@@ -39,10 +39,13 @@
 [github]
 	user = carlosgaldino
 [push]
-	default = upstream
+	default = simple
 
 [credential]
 helper = /opt/boxen/bin/boxen-git-credential
 
 [hub]
 protocol = https
+
+[merge]
+ff = false
