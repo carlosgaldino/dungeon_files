@@ -67,3 +67,6 @@ nmap <leader>fef mqggVG=`q
 
 " reload the config
 nmap <leader>r :so $MYVIMRC\|:noh<CR>
+
+" toogle numbers.vim
+nnoremap <F3> :NumbersToggle<CR>
