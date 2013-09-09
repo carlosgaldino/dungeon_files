@@ -1,0 +1,3 @@
+#!/usr/bin/env osascript
+
+tell application id "com.Growl.GrowlHelperApp" to close all notifications

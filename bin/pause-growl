@@ -1,0 +1,16 @@
+#!/usr/bin/env osascript
+
+tell application "System Events"
+  set isRunning to (count of (every process whose bundle identifier is "com.Growl.GrowlHelperApp")) > 0
+end tell
+
+if isRunning then
+  tell application id "com.Growl.GrowlHelperApp"
+    set paused to is paused
+    if (paused) then
+      resume
+    else
+      pause
+    end if
+  end tell
+end if
