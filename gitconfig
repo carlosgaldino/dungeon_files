@@ -10,8 +10,8 @@
   st = status
   ci = commit -v
   co = checkout
-  di = diff
-  dc = diff --cached
+  di = "!sh -c 'git diff --color=always $1 | less -R' -"
+  dc = "!sh -c 'git diff --cached --color=always $1 | less -R' -"
   amend = commit --amend
   aa = add --all
   au = add -u
