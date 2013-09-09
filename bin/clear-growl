@@ -1,3 +1,9 @@
 #!/usr/bin/env osascript
+#
+# Clears all Growl notifications from the screen.
+#
+# Example:
+#
+#   clear-growl
 
 tell application id "com.Growl.GrowlHelperApp" to close all notifications
