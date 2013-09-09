@@ -1,0 +1,14 @@
+#!/bin/sh
+#
+# Deletes a branch locally and on the origin remote.
+#
+# $1 - Branch name.
+#
+# Examples
+#
+#   git-nuke my-branch
+#
+# Copied from: https://github.com/holman/dotfiles/commit/8645e318fd113f1937f040294e4a0fb0b1f33e19
+
+git branch -d $1
+git push origin :$1

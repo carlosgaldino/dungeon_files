@@ -35,6 +35,8 @@
   l = "!source ~/.bin/githelpers && pretty_git_log"
   la = !git l --all
 
+  nuke = git-nuke
+
   showless = "!sh -c 'git show --color=always $1 | less -R' -"
 [github]
 	user = carlosgaldino
