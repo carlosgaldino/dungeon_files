@@ -15,6 +15,11 @@ unless File.directory?("#{ENV['HOME']}/.gitshots")
   exit!(1)
 end
 
+if `which imagesnap` == ''
+  puts 'You must install `imagesnap`.'
+  exit!(1)
+end
+
 file_path = "#{ENV['HOME']}/.gitshots/#{Time.now.to_i}.jpg"
 
 unless File.directory?(File.expand_path('../../rebase-merge', __FILE__))
