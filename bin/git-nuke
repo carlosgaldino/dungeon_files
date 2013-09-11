@@ -4,7 +4,7 @@
 #
 # $1 - Branch name.
 #
-# Examples
+# Example:
 #
 #   git-nuke my-branch
 #
