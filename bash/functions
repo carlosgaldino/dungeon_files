@@ -18,7 +18,7 @@ function gifify() {
       ffmpeg -i $1 -s 600x400 -pix_fmt rgb24 -r 10 -f gif - | gifsicle --optimize=3 --delay=3 > $1.gif
     fi
   else
-    echo "proper usage: gifify <input_movie.mov>. You DO need to include extension."
+    echo "proper usage: gifify [--good] <input_movie.mov>. You DO need to include extension."
   fi
 }
 
