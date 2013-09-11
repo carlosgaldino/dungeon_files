@@ -8,19 +8,6 @@ function rb-version {
   rbenv version-name 2>/dev/null
 }
 
-# Configure post-commit hook to take a photo
-function gimage() {
- cp ~/.post-commit-image .git/hooks/post-commit
-}
-
-function gifme() {
-  if [[ -n "$1" && -n "$2" ]]; then
-    ffmpeg -i $1 -pix_fmt rgb24 -f gif - | gifsicle -O3 -d3 > $2
-  else
-    echo "proper usage: gifme <input-movie.mov> <output-file.gif>. extensions must be provided."
-  fi
-}
-
 function gifify() {
   if [[ -n "$1" ]]; then
     if [[ $2 == '--good' ]]; then
