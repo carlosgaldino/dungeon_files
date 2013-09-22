@@ -70,3 +70,7 @@ nmap <leader>r :so $MYVIMRC\|:noh<CR>
 
 " toogle numbers.vim
 nnoremap <F3> :NumbersToggle<CR>
+
+" mappings for vim-fireplace
+au FileType clojure nnoremap <leader>e :Eval<CR>
+au FileType clojure nnoremap <leader>E :%Eval<CR>
