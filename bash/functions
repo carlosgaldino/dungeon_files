@@ -40,3 +40,14 @@ function extract() {
 function restore() {
   mongorestore --port $MONGODB_PORT --drop --noIndexRestore --db $1 $2
 }
+
+#!/bin/sh
+#
+# Create a directory and cd to it
+#
+# Example:
+#
+#   mkcd new-dir
+function mkcd() {
+ mkdir -p $1 && cd $1
+}
