@@ -10,7 +10,7 @@ map <right> <nop>
 cmap w!! w !sudo tee % >/dev/null
 
 " copy selection to the clipboard
-vmap <Leader>cp :w !pbcopy<CR><CR>
+vmap <Leader>cp "+y
 
 " editing -- see vimcasts#14
 cnoremap %% <C-R>=expand('%:h').'/'<CR>
