@@ -64,16 +64,20 @@ else
   exit!(1)
 end
 
-image_name = File.basename(ARGV.first)
+image_extension = File.extname(ARGV.first)
+
+image_name = File.basename(ARGV.first, image_extension)
 
 image = Excon.get(ARGV.first)
 
+image_key = image_name + "#{Time.now.to_i}" + image_extension
+
 bucket.files.create({
-  key: image_name,
+  key: image_key,
   public: true,
   body: image.body,
   content_type: image.headers['Content-Type'],
   metadata: { 'Cache-Control' => 'public, max-age=315360000' }
 })
 
-puts "http://#{credentials['bucket']}/#{image_name}"
+puts "http://#{credentials['bucket']}/#{image_key}"
