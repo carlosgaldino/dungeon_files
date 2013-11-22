@@ -1,5 +1,0 @@
-#!/bin/sh
-#
-# Get the ruby version name using `rbenv`.
-
-rbenv version-name 2>/dev/null
