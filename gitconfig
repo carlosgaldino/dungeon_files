@@ -42,12 +42,3 @@
 	user = carlosgaldino
 [push]
 	default = simple
-
-[credential]
-helper = /opt/boxen/bin/boxen-git-credential
-
-[hub]
-protocol = https
-
-[merge]
-ff = false
