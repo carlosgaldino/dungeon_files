@@ -30,7 +30,6 @@ fi
 
 # Git
 alias g="git"
-alias ptec="git config --local user.email carlos.galdino@plataformatec.com.br"
 alias me="git config --local user.email carloshsgaldino@gmail.com"
 
 # bundler
