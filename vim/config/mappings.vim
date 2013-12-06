@@ -22,7 +22,9 @@ map <Leader>et :tabe %%
 " I always do this
 cab W w
 cab Q q
+cab Qa qa
 cab Wq wq
+cab Wa wa
 cab WQ wq
 cab X x
 
