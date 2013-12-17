@@ -19,7 +19,7 @@ alias e=$EDITOR
 alias grep='grep --color=auto'
 alias diff=colordiff
 
-alias commit-image='ln -s ~/.bin/post-commit-image .git/hooks/post-commit'
+alias commit-image='ln -s ~/bin/post-commit-image .git/hooks/post-commit'
 
 # ls with colors
 if ls --color -d . >/dev/null 2>&1; then

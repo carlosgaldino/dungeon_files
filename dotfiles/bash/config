@@ -4,7 +4,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWUPSTREAM=auto
-export PATH="$HOME/.bin:/usr/local/bin:/usr/local/share/python:$PATH"
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/share/python:$PATH"
 
 # Erase duplicates in history
 export HISTCONTROL="ignoreboth:erasedups"
