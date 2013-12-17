@@ -10,9 +10,7 @@ Clone this repo:
 
 Then `cd` to the repo and run:
 
-`rake install`
-
-This will create symlinks for all files in this repo, like: `~/.bash_profile` to `~/.dungeon_files/bash_profile`
+`sh install.sh`
 
 ## Credits
 
