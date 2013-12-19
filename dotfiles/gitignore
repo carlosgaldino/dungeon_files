@@ -21,3 +21,6 @@ vendor/ruby
 vendor/jruby
 vendor/rbx
 .bundle
+
+# documentation for bundled vim plugins
+doc/tags
