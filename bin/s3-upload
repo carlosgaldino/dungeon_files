@@ -12,8 +12,8 @@
 # Requires your aws credentials in ~/.aws-credentials.yml file with the following
 # keys:
 #
-#   aws_access_key_id
-#   aws_secret_access_key
+#   access_key_id
+#   secret_access_key
 #   region
 #   bucket
 #
@@ -43,8 +43,8 @@ credentials_path = File.expand_path('~/.aws-credentials.yml')
 unless File.exist?(credentials_path)
   puts <<-STR
   You need to add your credentials in '~/.aws-credentials.yml' with the following information:
-    aws_access_key_id
-    aws_secret_access_key
+    access_key_id
+    secret_access_key
     region
     bucket
   STR
@@ -54,8 +54,8 @@ end
 credentials = YAML::load_file(credentials_path)
 
 Fog.credentials = { path_style: true }
-s3 = Fog::Storage.new(provider: 'AWS', aws_access_key_id: credentials['aws_access_key_id'],
-                      aws_secret_access_key: credentials['aws_secret_access_key'],
+s3 = Fog::Storage.new(provider: 'AWS', aws_access_key_id: credentials['access_key_id'],
+                      aws_secret_access_key: credentials['secret_access_key'],
                       region: credentials['region'])
 
 if s3.directories.find { |d| d.key == credentials['bucket'] }
