@@ -41,8 +41,6 @@ function restore() {
   mongorestore --port $MONGODB_PORT --drop --noIndexRestore --db $1 $2
 }
 
-#!/bin/sh
-#
 # Create a directory and cd to it
 #
 # Example:
