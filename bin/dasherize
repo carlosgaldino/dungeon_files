@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+#
+# Takes a string and return a new one downcased and separated by `-`.
+#
+# Example:
+#
+#   dasherize Some random phrase
+#   # => some-random-phrase
+
+printf ARGV.join('-').downcase
+
+exit 0
