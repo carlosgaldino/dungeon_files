@@ -28,3 +28,5 @@ if [ -e $HOME/bin ]; then
 fi
 
 link_files $HOME/.dungeon_files/bin $HOME/bin
+
+brew bundle
