@@ -7,6 +7,6 @@
 #   dasherize Some random phrase
 #   # => some-random-phrase
 
-printf ARGV.join('-').downcase
+printf ARGV.join('-').delete(':').downcase
 
 exit 0
