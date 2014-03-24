@@ -64,3 +64,6 @@ au BufRead,BufNewFile *.md setlocal textwidth=80
 
 " Disable autoindent when pasting
 set pastetoggle=<F2>
+
+autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd FileType gitcommit setlocal spell
