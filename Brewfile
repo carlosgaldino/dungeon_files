@@ -20,7 +20,7 @@ install gifsicle
 install ffmpeg
 
 install youtube-dl
-install heroku-toolbet
+install heroku-toolbelt
 
 # Remove outdated versions
 cleanup
