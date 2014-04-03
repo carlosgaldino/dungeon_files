@@ -1,0 +1,16 @@
+{
+  "layouts": [
+    "fullscreen",
+    "tall",
+    "wide",
+    "column",
+    "row",
+    "floating",
+  ],
+  "floating": [
+    "com.YoruFukurouProject.YoruFukurou",
+    "com.adiumX.adiumX",
+  ]
+}
+
+// vim: set ft=javascript :
