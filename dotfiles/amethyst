@@ -6,11 +6,11 @@
     "column",
     "row",
     "floating",
+    "widescreen-tall",
   ],
   "floating": [
     "com.YoruFukurouProject.YoruFukurou",
     "com.adiumX.adiumX",
+    "org.m0k.transmission",
   ]
 }
-
-// vim: set ft=javascript :
