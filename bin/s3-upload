@@ -19,6 +19,16 @@
 #
 # It assumes you have a CNAME record with the same value of the `bucket`.
 
+def image_properties(string)
+  if File.file?(string)
+    [File.open(string), "image/#{File.extname(string).delete('.')}"]
+  else
+    image = Excon.get(string)
+
+    [image.body, image.headers['Content-Type']]
+  end
+end
+
 if ARGV.empty?
   puts <<-STR
   You need to pass a link to an image.
@@ -65,19 +75,21 @@ else
   exit!(1)
 end
 
-image_extension = File.extname(ARGV.first)
+arg = ARGV.first
 
-image_name = File.basename(ARGV.first, image_extension)
+image_extension = File.extname(arg)
 
-image = Excon.get(ARGV.first)
+image_name = File.basename(arg, image_extension)
+
+image_body, content_type = image_properties(arg)
 
 image_key = image_name + "#{Time.now.to_i}" + image_extension
 
 bucket.files.create({
   key: image_key,
   public: true,
-  body: image.body,
-  content_type: image.headers['Content-Type'],
+  body: image_body,
+  content_type: content_type,
   metadata: { 'Cache-Control' => 'public, max-age=315360000' }
 })
 
