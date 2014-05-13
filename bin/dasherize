@@ -4,7 +4,7 @@
 #
 # Example:
 #
-#   dasherize Some random phrase
+#   dasherize "Some random phrase"
 #   # => some-random-phrase
 
 printf ARGV.first.gsub(/[[:space:]]/, '-').delete(':').downcase
