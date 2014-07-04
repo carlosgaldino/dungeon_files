@@ -76,3 +76,7 @@ nnoremap <F3> :NumbersToggle<CR>
 " mappings for vim-fireplace
 au FileType clojure nnoremap <leader>e :Eval<CR>
 au FileType clojure nnoremap <leader>E :%Eval<CR>
+
+" add strike-through to a word
+au FileType markdown nmap <leader>st ysiw~
+au FileType markdown nmap <leader>St ysiW~
