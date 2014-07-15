@@ -33,3 +33,8 @@ endfunction
 " Find all files in all non-dot directories starting in the working directory.
 " Fuzzy select one of those. Open the selected file with :e.
 nnoremap <leader>f :call SelectaCommand("find * -type f", "", ":e")<cr>
+
+" do not allow vim2hs to fold every function definition
+set nofoldenable
+
+let g:haskell_conceal_wide = 1
