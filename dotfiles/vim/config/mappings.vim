@@ -65,7 +65,7 @@ inoremap <s-tab> <c-n>"
 imap <c-l> <space>=><space>
 
 " format the entire file
-nmap <leader>fef mqggVG=`q
+" nmap <leader>fef mqggVG=`q
 
 " reload the config
 nmap <leader>r :so $MYVIMRC\|:noh<CR>

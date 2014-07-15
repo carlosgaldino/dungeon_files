@@ -10,9 +10,6 @@
 [submodule "dotfiles/vim/bundle/powerline"]
 	path = dotfiles/vim/bundle/powerline
 	url = https://github.com/Lokaltog/vim-powerline.git
-[submodule "dotfiles/vim/bundle/ctrlp"]
-	path = dotfiles/vim/bundle/ctrlp
-	url = https://github.com/kien/ctrlp.vim.git
 [submodule "dotfiles/vim/bundle/easymotion"]
 	path = dotfiles/vim/bundle/easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
@@ -85,9 +82,6 @@
 [submodule "dotfiles/vim/bundle/vim-powerline"]
 	path = dotfiles/vim/bundle/vim-powerline
 	url = https://github.com/Lokaltog/vim-powerline.git
-[submodule "dotfiles/vim/bundle/ctrlp.vim"]
-	path = dotfiles/vim/bundle/ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim.git
 [submodule "dotfiles/vim/bundle/vim-easymotion"]
 	path = dotfiles/vim/bundle/vim-easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
