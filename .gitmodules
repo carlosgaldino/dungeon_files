@@ -130,3 +130,9 @@
 [submodule "dotfiles/vim/bundle/ghcmod-vim"]
 	path = dotfiles/vim/bundle/ghcmod-vim
 	url = git@github.com:eagletmt/ghcmod-vim.git
+[submodule "dotfiles/vim/bundle/vim-textobj-user"]
+	path = dotfiles/vim/bundle/vim-textobj-user
+	url = git@github.com:kana/vim-textobj-user.git
+[submodule "dotfiles/vim/bundle/vim-textobj-rubyblock"]
+	path = dotfiles/vim/bundle/vim-textobj-rubyblock
+	url = git@github.com:nelstrom/vim-textobj-rubyblock.git
