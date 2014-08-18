@@ -79,7 +79,7 @@ arg = ARGV.first
 
 image_extension = File.extname(arg)
 
-image_name = File.basename(arg, image_extension)
+image_name = File.basename(arg, image_extension).gsub(/[[:space:]]/, '-')
 
 image_body, content_type = image_properties(arg)
 
