@@ -136,3 +136,6 @@
 [submodule "dotfiles/vim/bundle/vim-textobj-rubyblock"]
 	path = dotfiles/vim/bundle/vim-textobj-rubyblock
 	url = git@github.com:nelstrom/vim-textobj-rubyblock.git
+[submodule "dotfiles/vim/bundle/vim-scala"]
+	path = dotfiles/vim/bundle/vim-scala
+	url = git@github.com:derekwyatt/vim-scala.git
