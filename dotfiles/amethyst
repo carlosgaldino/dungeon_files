@@ -13,5 +13,6 @@
     "com.adiumX.adiumX",
     "org.m0k.transmission",
     "com.tapbots.TweetbotMac",
+    "com.jetbrains.intellij.ce",
   ]
 }
