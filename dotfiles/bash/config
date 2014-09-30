@@ -15,7 +15,7 @@ shopt -s histappend
 
 CDPATH=.:~:~/code
 
-export PS1='\[\033[0;34m\]\h\[\033[0;32m\]:\w\[\033[0;35m\]`git_ps1` \[\033[0;30m\]${RUBY_VERSION} \[\033[1;36m\]\$\[\033[0m\] '
+export PS1='\[\033[0;32m\]\w\[\033[0;35m\]`git_ps1` \[\033[0;34m\][\j] \[\033[0;30m\]${RUBY_VERSION} \[\033[1;36m\]\$\[\033[0m\] '
 PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
