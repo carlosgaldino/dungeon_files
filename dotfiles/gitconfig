@@ -10,8 +10,8 @@
   st = status
   ci = commit -v
   co = checkout
-  di = "!sh -c 'git diff --color=always $1 | less -R' -"
-  dc = "!sh -c 'git diff --cached --color=always $1 | less -R' -"
+  di = "!sh -c 'git diff --color=always $@ | less -R' -"
+  dc = "!sh -c 'git diff --cached --color=always $@ | less -R' -"
   amend = commit --amend
   aa = add --all
   au = add -u
@@ -37,7 +37,7 @@
 
   nuke = git-nuke
 
-  showless = "!sh -c 'git show --color=always $1 | less -R' -"
+  showless = "!sh -c 'git show --color=always $@ | less -R' -"
 [github]
 	user = carlosgaldino
 [push]
