@@ -1,0 +1,9 @@
+#!/bin/sh
+#
+# Search using `ag` ignoring some directories.
+#
+# Example:
+#
+#   agig MyClass spec/
+
+ag $1 --ignore-dir ${*:2}
