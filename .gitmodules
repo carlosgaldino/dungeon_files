@@ -139,3 +139,6 @@
 [submodule "dotfiles/vim/bundle/vim-scala"]
 	path = dotfiles/vim/bundle/vim-scala
 	url = git@github.com:derekwyatt/vim-scala.git
+[submodule "dotfiles/vim/bundle/vim-rust"]
+	path = dotfiles/vim/bundle/vim-rust
+	url = git@github.com:wting/rust.vim.git
