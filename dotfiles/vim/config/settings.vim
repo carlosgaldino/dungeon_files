@@ -69,6 +69,4 @@ set pastetoggle=<F2>
 autocmd BufRead,BufNewFile *.md setlocal spell
 autocmd FileType gitcommit setlocal spell
 
-let $PATH = $PATH . ':' . expand('~/.cabal/bin')
-
 runtime macros/matchit.vim

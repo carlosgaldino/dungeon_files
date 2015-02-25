@@ -80,6 +80,3 @@ au FileType clojure nnoremap <leader>E :%Eval<CR>
 " add strike-through to a word
 au FileType markdown nmap <leader>st ysiw~
 au FileType markdown nmap <leader>St ysiW~
-
-au FileType haskell nnoremap <leader>t :GhcModType<CR>
-au FileType haskell nnoremap <leader>tc :GhcModTypeClear<CR>

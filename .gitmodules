@@ -121,15 +121,9 @@
 [submodule "dotfiles/vim/bundle/numbers.vim"]
 	path = dotfiles/vim/bundle/numbers.vim
 	url = git@github.com:myusuf3/numbers.vim.git
-[submodule "dotfiles/vim/bundle/vim2hs"]
-	path = dotfiles/vim/bundle/vim2hs
-	url = git@github.com:dag/vim2hs.git
 [submodule "dotfiles/vim/bundle/vimproc"]
 	path = dotfiles/vim/bundle/vimproc
 	url = git@github.com:Shougo/vimproc.vim.git
-[submodule "dotfiles/vim/bundle/ghcmod-vim"]
-	path = dotfiles/vim/bundle/ghcmod-vim
-	url = git@github.com:eagletmt/ghcmod-vim.git
 [submodule "dotfiles/vim/bundle/vim-textobj-user"]
 	path = dotfiles/vim/bundle/vim-textobj-user
 	url = git@github.com:kana/vim-textobj-user.git
