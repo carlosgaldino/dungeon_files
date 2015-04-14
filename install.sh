@@ -23,7 +23,7 @@ do
   echo ""
 done
 
-if [ -e $HOME/bin ]; then 
+if [ -e $HOME/bin ]; then
   remove_file $HOME/bin
 fi
 
