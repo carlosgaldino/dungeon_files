@@ -25,6 +25,7 @@
      ;; better-defaults
      markdown
      org
+     html
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(neotree)
@@ -134,6 +135,7 @@ before layers configuration."
   ;; User initialization goes here
   (setq exec-path (append exec-path '("~/.cabal/bin/")))
   (setq-default git-enable-github-support t)
+  (setq-default enh-ruby-add-encoding-comment-on-save nil)
   )
 
 (defun dotspacemacs/config ()
