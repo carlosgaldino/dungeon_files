@@ -21,11 +21,14 @@
      haskell
      syntax-checking
      git
+     github
      javascript
-     ;; better-defaults
+     c-c++
      markdown
      org
      html
+     rust
+     shell
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(neotree)
@@ -133,7 +136,7 @@ before layers configuration."
    dotspacemacs-default-package-repository nil
    )
   ;; User initialization goes here
-  (setq exec-path (append exec-path '("~/.cabal/bin/")))
+  ;; (setq exec-path (append exec-path '("~/.cabal/bin/")))
   (setq-default git-enable-github-support t)
   (setq-default enh-ruby-add-encoding-comment-on-save nil)
   )
@@ -142,6 +145,7 @@ before layers configuration."
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
+  (exec-path-from-shell-initialize)
   (global-linum-mode 1)
   (setq magit-repo-dirs '("~/code/"))
   (setq-default js2-basic-offset 2)
@@ -152,7 +156,13 @@ layers configuration."
   (evil-leader/set-key
     "yp" 'clipboard-yank)
   (add-hook 'markdown-mode-hook 'turn-on-auto-fill)
-  (add-hook 'after-change-major-mode-hook 'turn-on-fci-mode)
+  ;; (add-hook 'after-change-major-mode-hook 'turn-on-fci-mode)
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  ;; TODO: find a way to make this work
+  ;; (setq helm-ag-insert-at-point nil)
+  (setq-default c-basic-offset 4)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
