@@ -4,6 +4,7 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWUPSTREAM=auto
+export RUST_SRC_PATH="$HOME/.rust/src"
 export PATH="$HOME/bin:$HOME/.cabal/bin:/usr/local/bin:/usr/local/share/python:$PATH"
 
 # Erase duplicates in history
