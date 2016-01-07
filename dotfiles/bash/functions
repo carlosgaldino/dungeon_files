@@ -10,3 +10,7 @@ function restore() {
 function mkcd() {
  mkdir -p $1 && cd $1
 }
+
+function ccompile() {
+  cc -Wall -Wextra $1 -o $1.o
+}
