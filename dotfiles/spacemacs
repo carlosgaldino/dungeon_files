@@ -29,6 +29,7 @@
      html
      rust
      shell
+     themes-megapack
      )
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(neotree)
@@ -141,7 +142,7 @@ before layers configuration."
   (setq-default enh-ruby-add-encoding-comment-on-save nil)
   )
 
-(defun dotspacemacs/config ()
+(defun dotspacemacs/user-config ()
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
@@ -152,9 +153,9 @@ layers configuration."
   (setq x-select-enable-clipboard nil)
   (spacemacs/declare-prefix "y" "copy/paste")
   (evil-leader/set-key
-    "yy" 'clipboard-kill-ring-save)
+    "xy" 'clipboard-kill-ring-save)
   (evil-leader/set-key
-    "yp" 'clipboard-yank)
+    "xp" 'clipboard-yank)
   (add-hook 'markdown-mode-hook 'turn-on-auto-fill)
   ;; (add-hook 'after-change-major-mode-hook 'turn-on-fci-mode)
   (setq web-mode-markup-indent-offset 2)
