@@ -31,6 +31,7 @@
      shell
      themes-megapack
      )
+   dotspacemacs-additional-packages '(rustfmt)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(neotree)
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -168,6 +169,7 @@ layers configuration."
   (add-hook 'racer-mode-hook #'eldoc-mode)
   (global-set-key (kbd "TAB") #'company-indent-or-complete-common)
   (evil-leader/set-key "gB" 'magit-blame-quit)
+  (add-hook 'rust-mode-hook #'rustfmt-enable-on-save)
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
