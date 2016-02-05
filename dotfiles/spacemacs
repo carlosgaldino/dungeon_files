@@ -161,8 +161,6 @@ layers configuration."
   (setq web-mode-css-indent-offset 2)
   (setq web-mode-code-indent-offset 2)
   (setq-default c-basic-offset 4)
-  (global-company-mode)
-  (setq company-tooltip-align-annotations t)
   (add-hook 'go-mode-hook
    (lambda ()
     (setq-local company-go-show-annotation t)))
