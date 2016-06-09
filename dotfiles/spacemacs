@@ -31,6 +31,7 @@
      html
      rust
      shell
+     spell-checking
      themes-megapack
      )
    dotspacemacs-additional-packages '(rustfmt)
@@ -165,6 +166,7 @@ layers configuration."
   (add-hook 'go-mode-hook
    (lambda ()
     (setq-local company-go-show-annotation t)))
+  (setq markdown-command "pandoc -f markdown -t html")
 )
 
 ;; Do not write anything past this comment. This is where Emacs will
