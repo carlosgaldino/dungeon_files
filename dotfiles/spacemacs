@@ -33,6 +33,7 @@
      shell
      spell-checking
      themes-megapack
+     erlang
      )
    dotspacemacs-additional-packages '(rustfmt)
    ;; A list of packages and/or extensions that will not be install and loaded.
