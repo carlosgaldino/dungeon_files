@@ -17,7 +17,7 @@
      ;; Uncomment a layer name and press C-c C-c to install it
      ;; --------------------------------------------------------
      (auto-completion :variables
-                     '(auto-completion-enable-help-tooltip t))
+                      '(auto-completion-enable-help-tooltip t))
      ruby
      haskell
      syntax-checking
@@ -30,10 +30,11 @@
      go
      html
      rust
-     shell
+     (shell :variables shell-default-shell 'eshell)
      spell-checking
      themes-megapack
      erlang
+     theming
      )
    dotspacemacs-additional-packages '(rustfmt)
    ;; A list of packages and/or extensions that will not be install and loaded.
@@ -70,9 +71,11 @@ before layers configuration."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-dark
+   dotspacemacs-themes '(brin
                          stekene-dark
+                         phoenix-dark-pink
                          solarized-dark
+                         spacemacs-dark
                          solarized-light)
    ;; If non nil the cursor color matches the state color.
    dotspacemacs-colorize-cursor-according-to-state t
@@ -144,17 +147,25 @@ before layers configuration."
   ;; (setq exec-path (append exec-path '("~/.cabal/bin/")))
   (setq-default git-enable-github-support t)
   (setq-default enh-ruby-add-encoding-comment-on-save nil)
-  )
+  (setq-default
+   theming-modifications
+   '((brin
+      (hl-line :background "#2F343D")
+      (helm-visible-mark :background "#434850")
+      (helm-selection :background "#434850")
+      ))
+   ))
 
 (defun dotspacemacs/user-config ()
   "Configuration function.
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
   (exec-path-from-shell-initialize)
+  (fset 'evil-visual-update-x-selection 'ignore)
   (global-linum-mode 1)
   (setq magit-repo-dirs '("~/code/"))
   (setq-default js2-basic-offset 2)
-  (setq x-select-enable-clipboard nil)
+  ;; (setq select-enable-clipboard t)
   (evil-leader/set-key
     "xy" 'clipboard-kill-ring-save)
   (evil-leader/set-key
@@ -165,10 +176,28 @@ layers configuration."
   (setq web-mode-code-indent-offset 2)
   (setq-default c-basic-offset 4)
   (add-hook 'go-mode-hook
-   (lambda ()
-    (setq-local company-go-show-annotation t)))
+            (lambda ()
+              (setq-local company-go-show-annotation t)))
   (setq markdown-command "pandoc -f markdown -t html")
-)
+  (add-hook 'erlang-mode-hook
+            (lambda () (add-hook 'before-save-hook (lambda () (spacemacs/indent-region-or-buffer))))))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (edts zonokai-theme zenburn-theme zen-and-art-theme xterm-color ws-butler window-numbering which-key web-mode web-beautify volatile-highlights vi-tilde-fringe use-package underwater-theme ujelly-theme twilight-theme twilight-bright-theme twilight-anti-bright-theme tronesque-theme toxi-theme toml-mode toc-org tao-theme tangotango-theme tango-plus-theme tango-2-theme tagedit sunny-day-theme sublime-themes subatomic256-theme subatomic-theme stekene-theme spacemacs-theme spaceline spacegray-theme soothe-theme solarized-theme soft-stone-theme soft-morning-theme soft-charcoal-theme smyx-theme smooth-scrolling smeargle slim-mode shm shell-pop seti-theme scss-mode sass-mode rvm rustfmt ruby-tools ruby-test-mode rubocop rspec-mode robe reverse-theme restart-emacs rbenv rainbow-delimiters racer quelpa purple-haze-theme professional-theme popwin planet-theme phoenix-dark-pink-theme phoenix-dark-mono-theme persp-mode pcre2el pastels-on-dark-theme paradox page-break-lines orgit organic-green-theme org-repo-todo org-present org-pomodoro org-plus-contrib org-bullets open-junk-file oldlace-theme occidental-theme obsidian-theme noctilux-theme niflheim-theme naquadah-theme mustang-theme multi-term move-text monokai-theme monochrome-theme molokai-theme moe-theme mmm-mode minimal-theme material-theme markdown-toc magit-gitflow magit-gh-pulls lush-theme lorem-ipsum linum-relative light-soap-theme leuven-theme less-css-mode json-mode js2-refactor js-doc jbeans-theme jazz-theme jade-mode ir-black-theme inkpot-theme info+ indent-guide ido-vertical-mode hungry-delete htmlize hl-todo hindent highlight-parentheses highlight-numbers highlight-indentation heroku-theme hemisu-theme help-fns+ helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-gitignore helm-flyspell helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag hc-zenburn-theme haskell-snippets gruvbox-theme gruber-darker-theme grandshell-theme gotham-theme google-translate golden-ratio go-eldoc gnuplot github-clone github-browse-file gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link gist gh-md gandalf-theme flycheck-rust flycheck-pos-tip flycheck-haskell flx-ido flatui-theme flatland-theme firebelly-theme fill-column-indicator farmhouse-theme fancy-battery expand-region exec-path-from-shell evil-visualstar evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-jumper evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-args evil-anzu eval-sexp-fu espresso-theme eshell-prompt-extras esh-help erlang emmet-mode django-theme disaster define-word darktooth-theme darkmine-theme darkburn-theme dakrone-theme cyberpunk-theme company-web company-tern company-statistics company-racer company-quickhelp company-go company-ghc company-cabal company-c-headers colorsarenice-theme color-theme-sanityinc-tomorrow color-theme-sanityinc-solarized coffee-mode cmm-mode cmake-mode clues-theme clean-aindent-mode clang-format chruby cherry-blossom-theme busybee-theme bundler buffer-move bubbleberry-theme bracketed-paste birds-of-paradise-plus-theme badwolf-theme auto-yasnippet auto-highlight-symbol auto-dictionary apropospriate-theme anti-zenburn-theme ample-zen-theme ample-theme alect-themes aggressive-indent afternoon-theme adaptive-wrap ace-window ace-link ace-jump-helm-line ac-ispell)))
+ '(select-active-regions nil)
+ '(x-select-enable-clipboard nil))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(company-tooltip-common ((t (:inherit company-tooltip :weight bold :underline nil))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :weight bold :underline nil)))))
