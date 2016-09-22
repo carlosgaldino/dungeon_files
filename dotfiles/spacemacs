@@ -178,7 +178,7 @@ layers configuration."
   (add-hook 'go-mode-hook
             (lambda ()
               (setq-local company-go-show-annotation t)))
-  (setq markdown-command "pandoc -f markdown -t html")
+  (setq markdown-command "pandoc -s -S -f markdown -t html -c http://blog.carlosgaldino.com/public/css/main.css -c http://blog.carlosgaldino.com/public/css/syntax.css")
   (add-hook 'before-save-hook (lambda () (when (eq (symbol-value 'major-mode) 'erlang-mode) (spacemacs/indent-region-or-buffer)))))
 
   ;; Do not write anything past this comment. This is where Emacs will
