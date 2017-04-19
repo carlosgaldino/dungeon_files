@@ -1,0 +1,90 @@
+#!/bin/bash
+
+set -e
+
+tabc() {
+    NAME=$1; if [ -z "$NAME" ]; then NAME="Default"; fi
+    # if you have trouble with this, change
+    # "Default" to the name of your default theme
+    echo -e "\033]50;SetProfile=$NAME\a"
+}
+
+tab-reset() {
+    NAME="Default"
+    echo -e "\033]50;SetProfile=$NAME\a"
+    cd - 1> /dev/null
+}
+
+colorssh() {
+    if [[ -n "$ITERM_SESSION_ID" ]]; then
+        trap "tab-reset" INT EXIT
+        tabc Vagrant
+        # if [[ "$*" =~ "production*" ]]; then
+        #     tabc Production
+        # elif [[ "$*" =~ "staging*" ]]; then
+        #     tabc Staging
+        # else
+        #     tabc Other
+        # fi
+    fi
+    vagrant ssh
+}
+
+vagrant_dir="$HOME/dev/gecko-chef"
+
+start_machine() {
+    if [ -n "$(vagrant status | grep running)" ]; then
+        echo "machine is already up"
+    else
+        vagrant up
+    fi
+}
+
+stop_machine() {
+    if [ -n "$(vagrant status | grep poweroff)" ]; then
+       echo "machine is not up"
+    else
+        vagrant halt
+    fi
+    cd - 1> /dev/null
+}
+
+shared_dir="$HOME/dev/work"
+
+mount_shared_dir() {
+    echo "mounting dir '$shared_dir'"
+    mount -t nfs 192.168.33.10:/home/vagrant/development $shared_dir
+}
+
+unmount_shared_dir() {
+    echo "unmounting dir '$shared_dir'"
+    umount -t nfs $shared_dir
+}
+
+vm() {
+    cd $vagrant_dir
+    case $1 in
+        start)
+            echo starting
+            start_machine
+            mount_shared_dir
+            colorssh
+            ;;
+        stop)
+            echo stopping
+            stop_machine
+            unmount_shared_dir
+            ;;
+        ssh)
+            colorssh
+            ;;
+        *)
+            echo "don't know what you want. forwarding it to vagrant."
+            vagrant $@
+            exit 1
+            ;;
+    esac
+    echo done
+}
+
+vm $@
