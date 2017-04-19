@@ -38,4 +38,6 @@ if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
 complete -o default -o nospace -F _git g
 
+ssh-add -K 2> /dev/null
+
 # vim: set ft=sh :
