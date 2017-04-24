@@ -51,6 +51,16 @@ stop_machine() {
     cd - 1> /dev/null
 }
 
+suspend_machine() {
+    if [ -n "$(vagrant status | grep poweroff)" ]; then
+        echo "machine is not up"
+    else
+        vagrant suspend
+        unmount_shared_dir
+    fi
+    cd - 1> /dev/null
+}
+
 shared_dir="$HOME/dev/work"
 
 mount_shared_dir() {
@@ -77,6 +87,10 @@ vm() {
             ;;
         ssh)
             colorssh
+            ;;
+        suspend)
+            echo suspending
+            suspend_machine
             ;;
         *)
             echo "don't know what you want. forwarding it to vagrant."
