@@ -2,7 +2,7 @@
 	name = Carlos Galdino
 	email = carloshsgaldino@gmail.com
 [color]
-	ui = auto
+  ui = auto
 [core]
 	excludesfile = /Users/carlosgaldino/.gitignore
   editor = vim

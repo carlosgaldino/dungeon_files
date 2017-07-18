@@ -31,6 +31,8 @@ colorssh() {
 }
 
 vagrant_dir="$HOME/dev/gecko-chef"
+vm_gopath="$HOME/dev/work/golang"
+gopath="$HOME/code/golang"
 
 start_machine() {
     if [ -n "$(vagrant status | grep running)" ]; then
@@ -38,6 +40,9 @@ start_machine() {
     else
         vagrant up
         mount_shared_dir
+        echo $GOPATH
+        export GOPATH=$vm_gopath
+        echo $GOPATH
     fi
 }
 
@@ -47,6 +52,8 @@ stop_machine() {
     else
         vagrant halt
         unmount_shared_dir
+        echo $GOPATH
+        export GOPATH=$gopath
     fi
     cd - 1> /dev/null
 }
@@ -57,6 +64,8 @@ suspend_machine() {
     else
         vagrant suspend
         unmount_shared_dir
+        echo $GOPATH
+        export GOPATH=$gopath
     fi
     cd - 1> /dev/null
 }
