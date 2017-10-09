@@ -5,7 +5,7 @@ export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWUPSTREAM=auto
 export RUST_SRC_PATH="$HOME/.rust/src"
-export GOPATH="$HOME/code/golang"
+export GOPATH="$HOME/development/golang"
 export PATH="$HOME/bin:$HOME/.cache/rebar3/bin:$GOPATH/bin:$HOME/.cargo/bin:$HOME/.cabal/bin:/usr/local/bin:/usr/local/share/python:$PATH"
 
 # Erase duplicates in history
@@ -21,20 +21,13 @@ export PS1='\[\033[0;32m\]\w\[\033[0;35m\]`git_ps1` \[\033[0;34m\][\j] \[\033[0;
 PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
-# autojump
-[[ -f `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
-
-# bash completion
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    source /usr/share/bash-completion/completions/*
+  elif [ -f /etc/bash_completion ]; then
+    source /etc/bash_completion
+  fi
 fi
-
-# chruby
-[ -f `brew --prefix`/opt/chruby/share/chruby/chruby.sh ] && source `brew --prefix`/opt/chruby/share/chruby/chruby.sh
-[ -f  `brew --prefix`/share/chruby/auto.sh ] && source `brew --prefix`/share/chruby/auto.sh
-
-# jenv
-if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
 complete -o default -o nospace -F _git g
 
