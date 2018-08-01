@@ -24,3 +24,7 @@ vendor/rbx
 
 # documentation for bundled vim plugins
 doc/tags
+
+*.outt
+
+*.log
