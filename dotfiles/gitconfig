@@ -4,7 +4,7 @@
 [color]
   ui = auto
 [core]
-	excludesfile = /Users/carlosgaldino/.gitignore
+	excludesfile = /home/vagrant/.gitignore
   editor = vim
 [alias]
   st = status
