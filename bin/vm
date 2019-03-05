@@ -30,7 +30,7 @@ colorssh() {
     vagrant ssh
 }
 
-vagrant_dir="$HOME/dev/gecko-chef"
+vagrant_dir="$HOME/dev/good-chef"
 vm_gopath="$HOME/dev/work/golang"
 gopath="$HOME/code/golang"
 
