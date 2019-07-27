@@ -3,3 +3,4 @@ tmp
 db
 log
 *.yml
+.git
