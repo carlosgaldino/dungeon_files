@@ -12,7 +12,7 @@
   co = checkout
   di = "!sh -c 'git diff --color=always $@ | less -R' -"
   dc = "!sh -c 'git diff --cached --color=always $@ | less -R' -"
-  amend = commit --amend
+  amend = commit --amend -v
   aa = add --all
   au = add -u
   ff = merge --ff-only
