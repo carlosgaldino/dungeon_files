@@ -7,9 +7,10 @@ export GIT_PS1_SHOWUPSTREAM=auto
 export RUST_SRC_PATH="$HOME/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src"
 export GOPATH="$HOME/code/golang"
 export GO111MODULE="on"
-export PATH="$HOME/bin:/usr/local/opt/llvm/bin:$HOME/.cache/rebar3/bin:$GOPATH/bin:$HOME/.cargo/bin:$HOME/.cabal/bin:$HOME/.gem/ruby/2.7.0/bin:/usr/local/bin:/usr/local/opt/ruby/bin:/usr/local/share/python:$PATH"
-
+export PATH="$HOME/bin:$HOME/.cache/rebar3/bin:$GOPATH/bin:$HOME/.cargo/bin:$HOME/.cabal/bin:/usr/local/bin:/usr/local/share/python:$PATH"
 export STARSHIP_CONFIG="$HOME/.starship.toml"
+
+export SHIPCAT_MANIFEST_DIR="$HOME/code/manifests"
 
 # Erase duplicates in history
 export HISTCONTROL=ignoredups:erasedups
