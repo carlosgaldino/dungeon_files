@@ -7,8 +7,15 @@
 	excludesfile = /Users/carlosgaldino/.gitignore
   editor = vim
   pager = delta --paging "always" --file-color="white" --minus-color="#ff5b56" --plus-color="#49c876" --plus-emph-color="#048045" # --plus-color="#5ad18d" --dark # --theme="GitHub" --light
+
 [interactive]
   diffFilter = delta --color-only --file-color="white" --minus-color="#ff5b56" --plus-color="#49c876" --plus-emph-color="#048045"
+
+[url "git@github.com:babylonpartners"]
+  insteadOf = https://github.com/babylonpartners
+[url "git@github.com:Babylonpartners"]
+  insteadOf = https://github.com/Babylonpartners
+
 [alias]
   st = status
   ci = commit -v
