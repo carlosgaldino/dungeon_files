@@ -69,3 +69,42 @@ git_page_maybe() {
         less --quit-if-one-screen --no-init --RAW-CONTROL-CHARS --chop-long-lines
     fi
 }
+
+git_head_hash() {
+  git log -1 --format="%h" 2>/dev/null
+}
+
+parse_git_branch() {
+  local index=$(git status --porcelain 2>/dev/null)
+  local branch=$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
+
+  local status=""
+
+  if $(echo "$index" | grep '^??' &>/dev/null); then
+    status="?$status"
+  fi
+
+  if $(echo "$index" | grep '^M?D' &>/dev/null); then
+    status="-$status"
+  fi
+
+  if $(echo "$index" | grep '^A' &>/dev/null); then
+    status="+$status"
+  fi
+
+  if $(echo "$index" | grep '[R|M]' &>/dev/null); then
+    status="*$status"
+  fi
+
+  if [ -n "$status" ]; then
+    echo -n "$branch $status"
+  else
+    echo -n $branch
+  fi
+}
+
+git_ps1() {
+  if [ -n "$(parse_git_branch)" ]; then
+    echo " ($(git_head_hash)|$(parse_git_branch))"
+  fi
+}
