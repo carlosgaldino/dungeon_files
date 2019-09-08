@@ -43,7 +43,9 @@ values."
      emacs-lisp
      git
      github
-     (go :variables gofmt-command "goimports")
+     (go :variables
+         gofmt-command "goimports"
+         go-format-before-save t)
      html
      lsp
      markdown
