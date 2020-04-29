@@ -2,5 +2,5 @@ vendor
 tmp
 db
 log
-*.yml
+# *.yml
 .git

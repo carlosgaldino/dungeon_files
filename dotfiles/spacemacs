@@ -61,7 +61,9 @@ values."
           lsp-rust-server 'rust-analyzer
           lsp-rust-analyzer-server-display-inlay-hints t)
           ;; lsp-rust-analyzer-display-parameter-hints t)
+     javascript
      markdown
+     protobuf
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
@@ -354,8 +356,10 @@ you should place your code here."
   (add-hook 'go-mode-hook 'lsp)
   (add-hook 'rust-mode-hook 'lsp)
 
+  (add-hook 'before-save-hook 'gofmt-before-save)
+
   ;; (setq markdown-command "pandoc --toc --toc-depth=4 -s -f markdown+smart -t html -c http://blog.carlosgaldino.com/public/css/main.css -c http://blog.carlosgaldino.com/public/css/syntax.css")
-  (setq markdown-command "pandoc --template=GitHub.html5")
+  (setq markdown-command "pandoc --standalone --template=GitHub.html5")
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
