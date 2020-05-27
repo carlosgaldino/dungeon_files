@@ -41,9 +41,12 @@ alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
 alias marked="open -a Marked"
 
 alias upload-img="s3-upload -t -bucket img"
+alias upload-wiki-img="s3-upload -bucket wiki -path public/images"
+alias upload-blog-img="s3-upload -bucket blog -path public/images"
 alias publish-post="s3-upload -bucket blog index.html atom.xml"
 alias publish-draft="s3-upload -bucket blog -path drafts"
 alias publish-wiki="s3-upload -bucket wiki"
+alias publish-blog-css="s3-upload -bucket blog -path public/css"
 
 alias ag="ag --hidden"
 alias k="kubectl"
