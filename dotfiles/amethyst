@@ -9,11 +9,5 @@
     "widescreen-tall",
   ],
   "floating": [
-    "com.YoruFukurouProject.YoruFukurou",
-    "com.adiumX.adiumX",
-    "org.m0k.transmission",
-    "com.tapbots.TweetbotMac",
-    "com.jetbrains.intellij.ce",
-    "com.apple.iBooksX",
   ]
 }
