@@ -15,6 +15,8 @@
   insteadOf = https://github.com/babylonpartners
 [url "git@github.com:Babylonpartners"]
   insteadOf = https://github.com/Babylonpartners
+[url "git@github.com:babylonhealth"]
+  insteadOf = https://github.com/babylonhealth
 
 [alias]
   st = status
