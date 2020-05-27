@@ -30,7 +30,7 @@ values."
    dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
+   '(graphviz
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
@@ -38,6 +38,11 @@ values."
      ;; ----------------------------------------------------------------
      ivy
      auto-completion
+     (auto-completion :variables
+                      ;; auto-completion-return-key-behavior nil
+                      ;; auto-completion-tab-key-behavior 'complete
+                      auto-completion-enable-sort-by-usage t
+                      auto-completion-private-snippets-directory nil)
      ;; better-defaults
      dash
      emacs-lisp
@@ -47,18 +52,28 @@ values."
          gofmt-command "goimports"
          go-format-before-save t)
      html
-     lsp
+     (lsp :variables
+          ;; lsp-ui-doc-enable nil
+          ;; lsp-ui-sideline-code-actions-prefix " "
+          ;; lsp-ui-sideline-show-hover nil
+          lsp-rust-server 'rust-analyzer
+          lsp-rust-analyzer-server-display-inlay-hints t)
+          ;; lsp-rust-analyzer-display-parameter-hints t)
      markdown
      ;; org
      ;; (shell :variables
      ;;        shell-default-height 30
      ;;        shell-default-position 'bottom)
      (spell-checking :variables
-                     spell-checking-enable-auto-dictionary t)
+                     spell-checking-enable-by-default nil
+                     spell-checking-enable-auto-dictionary t
+                     enable-flyspell-auto-completion t)
      (rust :variables
            rust-format-on-save t)
-     syntax-checking
+     (syntax-checking :variables
+                      syntax-checking-enable-tooltips nil)
      version-control
+     yaml
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -290,7 +305,7 @@ values."
    ;; List of search tool executable names. Spacemacs uses the first installed
    ;; tool of the list. Supported tools are `ag', `pt', `ack' and `grep'.
    ;; (default '("ag" "pt" "ack" "grep"))
-   dotspacemacs-search-tools '("ag" "pt" "ack" "grep")
+   dotspacemacs-search-tools '("rg" "ag" "pt" "ack" "grep")
    ;; The default package repository used if no explicit repository has been
    ;; specified with an installed package.
    ;; Not used for now. (default nil)
@@ -335,7 +350,7 @@ you should place your code here."
   (add-hook 'text-mode-hook 'change-input)
 
   (add-hook 'go-mode-hook 'lsp)
-  ;; (add-hook 'rust-mode-hook 'lsp)
+  (add-hook 'rust-mode-hook 'lsp)
 
   ;; (setq markdown-command "pandoc --toc --toc-depth=4 -s -f markdown+smart -t html -c http://blog.carlosgaldino.com/public/css/main.css -c http://blog.carlosgaldino.com/public/css/syntax.css")
   (setq markdown-command "pandoc --template=GitHub.html5")
@@ -371,9 +386,10 @@ This function is called at the very end of Spacemacs initialization."
    (quote
     ("0f1733ad53138ddd381267b4033bcb07f5e75cd7f22089c7e650f1bb28fc67f4" default)))
  '(evil-want-Y-yank-to-eol nil)
+ '(ispell-dictionary "british")
  '(package-selected-packages
    (quote
-    (web-mode toml-mode tagedit smeargle slim-mode scss-mode sass-mode racer pug-mode orgit mmm-mode markdown-toc magit-gitflow magit-popup magit-gh-pulls kaolin-themes autothemer haml-mode go-guru go-eldoc gitignore-mode github-search github-clone github-browse-file gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gist gh marshal logito pcache ht gh-md fuzzy flyspell-correct-ivy flyspell-correct flycheck-rust flycheck-pos-tip pos-tip flycheck evil-magit magit transient git-commit with-editor emmet-mode diff-hl company-web web-completion-data company-statistics company-go go-mode company cargo markdown-mode rust-mode auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete spinner evil-visualstar evil-visual-mark-mode evil-tutor evil-surround evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state iedit evil-exchange evil-ediff evil-args evil-anzu anzu evil undo-tree adaptive-wrap ws-butler winum which-key wgrep volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline smex smartparens restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint ivy-hydra indent-guide hydra lv hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-make google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-unimpaired evil-search-highlight-persist highlight evil-numbers evil-nerd-commenter evil-escape goto-chg eval-sexp-fu elisp-slime-nav dumb-jump popup f dash s diminish define-word counsel-projectile projectile pkg-info epl counsel swiper ivy column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed async aggressive-indent ace-window ace-link avy))))
+    (graphviz-dot-mode web-mode toml-mode tagedit smeargle slim-mode scss-mode sass-mode racer pug-mode orgit mmm-mode markdown-toc magit-gitflow magit-popup magit-gh-pulls kaolin-themes autothemer haml-mode go-guru go-eldoc gitignore-mode github-search github-clone github-browse-file gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gist gh marshal logito pcache ht gh-md fuzzy flyspell-correct-ivy flyspell-correct flycheck-rust flycheck-pos-tip pos-tip flycheck evil-magit magit transient git-commit with-editor emmet-mode diff-hl company-web web-completion-data company-statistics company-go go-mode company cargo markdown-mode rust-mode auto-yasnippet yasnippet auto-dictionary ac-ispell auto-complete spinner evil-visualstar evil-visual-mark-mode evil-tutor evil-surround evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state iedit evil-exchange evil-ediff evil-args evil-anzu anzu evil undo-tree adaptive-wrap ws-butler winum which-key wgrep volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline smex smartparens restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint ivy-hydra indent-guide hydra lv hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-make google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-unimpaired evil-search-highlight-persist highlight evil-numbers evil-nerd-commenter evil-escape goto-chg eval-sexp-fu elisp-slime-nav dumb-jump popup f dash s diminish define-word counsel-projectile projectile pkg-info epl counsel swiper ivy column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed async aggressive-indent ace-window ace-link avy))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
