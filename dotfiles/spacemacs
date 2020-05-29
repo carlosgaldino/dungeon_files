@@ -52,9 +52,12 @@ values."
          go-format-before-save t)
      html
      (lsp :variables
-          ;; lsp-ui-doc-enable nil
-          ;; lsp-ui-sideline-code-actions-prefix " "
-          ;; lsp-ui-sideline-show-hover nil
+          lsp-signature-auto-activate t
+          lsp-signature-doc-lines 1
+          lsp-ui-sideline-code-actions-prefix " "
+          lsp-ui-sideline-show-hover nil
+          lsp-ui-doc-enable nil
+          lsp-ui-doc-use-childframe nil
           lsp-rust-server 'rust-analyzer
           lsp-rust-analyzer-server-display-inlay-hints t)
           ;; lsp-rust-analyzer-display-parameter-hints t)
