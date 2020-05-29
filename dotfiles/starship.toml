@@ -1,0 +1,24 @@
+[battery]
+full_symbol = "🔋 "
+charging_symbol = "⚡️ "
+discharging_symbol = "💀 "
+
+[[battery.display]]
+threshold = 30
+style = "bold red"
+
+[git_branch]
+symbol = "🌱 "
+truncation_symbol = ""
+
+[git_commit]
+only_detached = false
+
+[git_status]
+modified = "*"
+
+[ruby]
+symbol = "🔺 "
+
+[time]
+disabled = false
