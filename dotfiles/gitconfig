@@ -6,12 +6,17 @@
 [core]
 	excludesfile = /Users/carlosgaldino/.gitignore
   editor = vim
+  pager = delta --paging "always" --file-color="white" --minus-color="#ff5b56" --plus-color="#49c876" --plus-emph-color="#048045" # --plus-color="#5ad18d" --dark # --theme="GitHub" --light
+[interactive]
+  diffFilter = delta --color-only --file-color="white" --minus-color="#ff5b56" --plus-color="#49c876" --plus-emph-color="#048045"
 [alias]
   st = status
   ci = commit -v
   co = checkout
-  di = "!sh -c 'git diff --color=always $@ | less -R' -"
-  dc = "!sh -c 'git diff --cached --color=always $@ | less -R' -"
+  di = diff
+  dc = diff --cached
+  # di = "!sh -c 'git diff --color=always $@ | less -R' -"
+  # dc = "!sh -c 'git diff --cached --color=always $@ | less -R' -"
   amend = commit --amend -v
   aa = add --all
   au = add -u
