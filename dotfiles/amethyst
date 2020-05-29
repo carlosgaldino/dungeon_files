@@ -9,5 +9,7 @@
     "widescreen-tall",
   ],
   "floating": [
+    "com.apple.Dictionary",
+    "us.zoom.xos",
   ]
 }
