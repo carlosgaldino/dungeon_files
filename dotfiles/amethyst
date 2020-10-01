@@ -7,9 +7,11 @@
     "row",
     "floating",
     "widescreen-tall",
+    "3column-left",
   ],
   "floating": [
     "com.apple.Dictionary",
     "us.zoom.xos",
+    "maccatalyst.com.atebits.Tweetie2",
   ]
 }
