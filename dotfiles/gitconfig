@@ -26,6 +26,7 @@
   pom = push origin master
   clearbranches = "!sh -ec 'git checkout master; git branch --merged | grep -v master | xargs git branch -d; git checkout -' -"
   undo = reset HEAD~
+  unstage = restore --staged
 
   # Fancy logging.
   #   h = head
