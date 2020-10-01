@@ -14,3 +14,7 @@ function mkcd() {
 function ccompile() {
   cc -Wall -Wextra $1 -o $1.o
 }
+
+function set_win_title(){
+  echo -ne "\033]0; ${PWD##*/} \007"
+}

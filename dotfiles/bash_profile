@@ -1,3 +1,4 @@
+export PROMPT_COMMAND=""
 eval "$(starship init bash)"
 
 source ~/.bash/config
