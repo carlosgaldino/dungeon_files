@@ -52,12 +52,12 @@ values."
          go-format-before-save t)
      html
      (lsp :variables
-          lsp-signature-auto-activate t
+          lsp-signature-auto-activate nil
           lsp-signature-doc-lines 1
           lsp-ui-sideline-code-actions-prefix " "
-          lsp-ui-sideline-show-hover nil
+          ;; lsp-ui-sideline-show-hover nil
           lsp-ui-doc-enable nil
-          lsp-ui-doc-use-childframe nil
+          ;; lsp-ui-doc-use-childframe nil
           lsp-rust-server 'rust-analyzer
           lsp-rust-analyzer-server-display-inlay-hints t)
           ;; lsp-rust-analyzer-display-parameter-hints t)
@@ -160,7 +160,7 @@ values."
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
    dotspacemacs-default-font '("Source Code Pro"
-                               :size 13
+                               :size 17
                                :weight normal
                                :width normal
                                :powerline-scale 1.1)
