@@ -10,7 +10,7 @@ set colorcolumn=80 " highlight column 80
 set ruler          " show line and column number
 set encoding=utf-8 " default enconding to UTF-8
 set background=dark
-colorscheme solarized
+colorscheme snazzy
 
 """""
 "" whitespaces

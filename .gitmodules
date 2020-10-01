@@ -136,3 +136,6 @@
 [submodule "dotfiles/vim/bundle/vim-rust"]
 	path = dotfiles/vim/bundle/vim-rust
 	url = git@github.com:wting/rust.vim.git
+[submodule "dotfiles/vim/bundle/vim-snazzy"]
+	path = dotfiles/vim/bundle/vim-snazzy
+	url = git@github.com:connorholyday/vim-snazzy.git
