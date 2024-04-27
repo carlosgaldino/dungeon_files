@@ -133,4 +133,5 @@
 ;; Conflicts with `workspaces'
 ;; (map! :n "SPC TAB" #'evil-switch-to-windows-last-buffer)
 ;; (setq global-so-long-mode nil)
-(setq-default so-long-threshold 10000)
+(after! so-long
+  (setq-default so-long-threshold 10000))
