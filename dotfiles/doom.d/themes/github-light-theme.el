@@ -47,9 +47,13 @@
                       (isearch (:background github-light-blue-l))
                       (warning (:foreground github-light-coral))
 
-                      ;; (mode-line           (:background github-light-bg :foreground github-light-fg :bold nil
-                      ;;                       :box (:line-width 2 :color github-light-bg-hl)))
-                      ;; (mode-line-inactive  (:background github-light-bg :foreground github-light-fg :bold nil
+                      (evil-ex-substitute-replacement (:foreground github-light-red :underline t))
+
+                      (mode-line (:background github-light-bg :foreground github-light-fg :bold nil
+                                  :box (:line-width 1 :color github-light-gray-lll)))
+                      (mode-line-inactive (:background github-light-bg :foreground github-light-gray-l :bold nil
+                                           :box (:line-width 1 :color github-light-gray-lll)))
+                                        ; (mode-line-inactive  (:background github-light-bg :foreground github-light-fg :bold nil
                       ;;                       :box (:line-width 2 :color github-light-bg-hl)))
                       ;; (mode-line-buffer-id (:background 'unspecified :foreground github-light-fg :bold nil))
                       ;; (mode-line-highlight (:foreground github-light-bg-hl :box nil :bold nil))
