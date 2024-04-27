@@ -132,3 +132,5 @@
       "d" #'lsp-rust-analyzer-open-external-docs)
 ;; Conflicts with `workspaces'
 ;; (map! :n "SPC TAB" #'evil-switch-to-windows-last-buffer)
+;; (setq global-so-long-mode nil)
+(setq-default so-long-threshold 10000)
