@@ -8,6 +8,7 @@
 
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;(package! some-package)
+(package! auto-dark)
 (package! kaolin-themes)
 (package! magit-delta)
 

@@ -81,6 +81,11 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+(use-package! auto-dark
+  :config
+  (auto-dark-mode t)
+  (setq auto-dark-dark-theme 'kaolin-mono-dark)
+  (setq auto-dark-light-theme 'kaolin-mono-light))
 (use-package! lsp
   :custom
   (lsp-headerline-breadcrumb-segments '(project file symbols))
