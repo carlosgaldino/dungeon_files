@@ -9,15 +9,17 @@
   pager = delta --paging 'always' --theme='Sublime Snazzy' # --file-color="white" --minus-color="#ff5b56" --plus-color="#49c876" --plus-emph-color="#048045" # --plus-color="#5ad18d" --dark # --theme="GitHub" --light
 [interactive]
   diffFilter = delta --color-only # --file-color="white" --minus-color="#ff5b56" --plus-color="#49c876" --plus-emph-color="#048045"
+[commit]
+  verbose = true
 [alias]
-  st = status
-  ci = commit -v
+  st = !git-number
+  ci = commit
   co = checkout
   # di = diff
   # dc = diff --cached
   di = "!sh -c 'git diff --color=always $@ | less -R' -"
   dc = "!sh -c 'git diff --cached --color=always $@ | less -R' -"
-  amend = commit --amend -v
+  amend = commit --amend
   aa = add --all
   au = add -u
   ff = merge --ff-only
