@@ -133,7 +133,8 @@
   (kaolin-treemacs-theme))
 (after! lsp
   (setq lsp-headerline-breadcrumb-enable t)
-  (setq lsp-headerline-breadcrumb-enable-diagnostics nil))
+  (setq lsp-headerline-breadcrumb-enable-diagnostics nil)
+  (setq lsp-inlay-hint-enable t))
 (after! rustic
   (setq rustic-cargo-check-arguments "--workspace --all-targets")
   (setq rustic-default-clippy-arguments "--workspace --all-targets")
