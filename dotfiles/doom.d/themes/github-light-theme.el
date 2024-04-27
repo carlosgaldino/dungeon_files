@@ -137,6 +137,7 @@
                       (font-lock-variable-name-face (:foreground github-light-fg))
                       (font-lock-preprocessor-face (:foreground github-light-blue))
                       (font-lock-type-face (:foreground github-light-orange))
+                      (font-lock-operator-face (:foreground github-light-blue))
 
                       (show-paren-match (:background github-light-gray-ll))
 

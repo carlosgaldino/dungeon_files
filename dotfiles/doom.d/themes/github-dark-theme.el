@@ -137,6 +137,7 @@
                       (font-lock-variable-name-face (:foreground github-dark-fg))
                       (font-lock-preprocessor-face (:foreground github-dark-blue))
                       (font-lock-type-face (:foreground github-dark-orange))
+                      (font-lock-operator-face (:foreground github-dark-blue))
 
                       (show-paren-match (:background github-dark-gray-ll))
 
@@ -150,7 +151,7 @@
                       (tree-sitter-hl-face:function.macro (:inherit 'font-lock-function-call-face))
                       (tree-sitter-hl-face:keyword (:inherit 'font-lock-keyword-face))
                       (tree-sitter-hl-face:method.call (:inherit 'font-lock-function-call-face))
-                      (tree-sitter-hl-face:operator (:foreground github-dark-blue))
+                      (tree-sitter-hl-face:operator (:inherit 'font-lock-operator-face))
                       (tree-sitter-hl-face:string (:inherit 'font-lock-string-face))
                       (tree-sitter-hl-face:type (:inherit 'font-lock-type-face))
                       ;; (tree-sitter-hl-face:type.argument (:foreground github-dark-type))
