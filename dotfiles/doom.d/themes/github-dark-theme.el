@@ -114,6 +114,8 @@
                       (magit-hash (:foreground github-dark-gray-l))
                       (magit-refname (:foreground github-dark-gray-l))
                       (magit-tag (:foreground github-dark-coral))
+                      (magit-diff-hunk-heading-highlight (:background github-dark-gray-lll))
+                      (magit-diff-hunk-heading (:background github-dark-gray-lll))
 
                       (nerd-icons-red (:foreground github-dark-red))
                       (nerd-icons-dred (:foreground github-dark-red-l))

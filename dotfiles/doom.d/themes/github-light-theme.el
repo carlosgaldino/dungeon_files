@@ -12,7 +12,6 @@
 
                       (github-dark-bg "#0a0a0a")
                       (github-light-bg "#fafafa")
-                      ;; (github-light-bg-hl "#f4f4f4")
                       (github-light-bg-hl "#eaeef2")
                       (github-light-bg-paren "#474747")
                       (github-light-fg "#1f2328")
@@ -115,6 +114,8 @@
                       (magit-hash (:foreground github-light-gray-l))
                       (magit-refname (:foreground github-light-gray-l))
                       (magit-tag (:foreground github-light-coral))
+                      (magit-diff-hunk-heading-highlight (:background github-light-gray-lll))
+                      (magit-diff-hunk-heading (:background github-light-gray-lll))
 
                       (nerd-icons-red (:foreground github-light-red))
                       (nerd-icons-lred (:foreground github-light-red-l))
