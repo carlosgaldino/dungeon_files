@@ -131,6 +131,8 @@
   (evil-define-key 'insert 'global (kbd "<tab>") 'my/copilot-tab-or-default))
 (use-package! all-the-icons
   :if (display-graphic-p))
+(use-package! literate-calc-mode
+  :ensure t)
 (use-package! lsp
   :custom
   (lsp-headerline-breadcrumb-segments '(project file symbols))
