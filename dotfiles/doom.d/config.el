@@ -98,15 +98,16 @@
   (lsp-ui-sideline-show-diagnostics nil))
 (use-package! magit
   :hook (magit-mode . magit-delta-mode))
+(use-package! tree-sitter
+  :custom
+  (tree-sitter-syntax-highlight-enable t)
+  (tree-sitter-fold-enable t)
+  (tree-sitter-fold-indicators-enable t))
 
 (after! kaolin-themes
   (kaolin-treemacs-theme))
 (after! lsp
   (setq lsp-headerline-breadcrumb-enable t))
-(after! tree-sitter
-  (tree-sitter-syntax-highlight-enable t)
-  (tree-sitter-fold-enable t)
-  (tree-sitter-fold-indicators-enable t))
 (map! :n "RET" #'evil-ex-nohighlight)
 ;; Conflicts with `workspaces'
 ;; (map! :n "SPC TAB" #'evil-switch-to-windows-last-buffer)
