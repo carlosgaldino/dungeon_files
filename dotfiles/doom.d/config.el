@@ -122,7 +122,9 @@
   (setq lsp-headerline-breadcrumb-enable t)
   (setq lsp-headerline-breadcrumb-enable-diagnostics nil))
 (after! rustic
-  (setq rustic-cargo-check-arguments "--all-targets"))
+  (setq rustic-cargo-check-arguments "--all-targets")
+  (setq rustic-default-clippy-arguments "--workspace --all-targets")
+  (setq rustic-default-test-arguments "--workspace --all-targets"))
 (map! :n "RET" #'evil-ex-nohighlight)
 (map! :desc "Open documentation for symbol"
       :map rust-mode-map
