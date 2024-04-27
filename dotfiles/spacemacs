@@ -370,6 +370,10 @@ you should place your code here."
   (define-key evil-normal-state-map (kbd "RET") 'spacemacs/evil-search-clear-highlight)
 
   (spacemacs/set-leader-keys "\"" 'terminal-here-project-launch)
+  (defun cargo-check-tests ()
+    (interactive)
+    (shell-command "cargo check --tests"))
+  (spacemacs/set-leader-keys-for-major-mode 'rust-mode "ct" 'cargo-check-tests)
 
   (add-hook 'go-mode-hook 'lsp)
   (add-hook 'rust-mode-hook 'lsp)
