@@ -2,7 +2,7 @@ precmd_functions+=(set_win_title)
 
 source ~/.zshfunctions
 export GOPATH="$HOME/code/golang"
-export PATH="/opt/homebrew/opt/openjdk/bin:/opt/homebrew/bin:$HOME/.cargo/bin:$HOME/bin:$HOME/.cache/rebar3/bin:$GOPATH/bin:$HOME/.cargo/bin:$HOME/.cabal/bin:$HOME/.gem/ruby/2.7.0/bin:/usr/local/bin:/usr/local/opt/ruby/bin:/usr/local/share/python:$PATH"
+export PATH="$HOME/.emacs.d/bin:/opt/homebrew/opt/openjdk/bin:/opt/homebrew/bin:$HOME/.cargo/bin:$HOME/bin:$HOME/.cache/rebar3/bin:$GOPATH/bin:$HOME/.cargo/bin:$HOME/.cabal/bin:$HOME/.gem/ruby/2.7.0/bin:/usr/local/bin:/usr/local/opt/ruby/bin:/usr/local/share/python:$PATH"
 
 # work
 export PATH="$PYENV_ROOT/bin:/usr/local/bin:$PATH"
