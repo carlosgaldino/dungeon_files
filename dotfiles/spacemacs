@@ -66,6 +66,7 @@ values."
           lsp-rust-analyzer-server-display-inlay-hints t)
           ;; lsp-rust-analyzer-display-parameter-hints t)
      markdown
+     org
      python
      ;; org
      (tree-sitter :variables
@@ -377,6 +378,8 @@ you should place your code here."
 
   (add-hook 'go-mode-hook 'lsp)
   (add-hook 'rust-mode-hook 'lsp)
+
+  (setq org-agenda-files (directory-files-recursively "~/.org/" "\\.org$"))
 
   ;; (setq markdown-command "pandoc --toc --toc-depth=4 -s -f markdown+smart -t html -c http://blog.carlosgaldino.com/public/css/main.css -c http://blog.carlosgaldino.com/public/css/syntax.css")
   (setq markdown-command "pandoc --template=GitHub.html5")
