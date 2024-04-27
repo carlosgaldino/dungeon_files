@@ -85,7 +85,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(kaolin-themes)
+   dotspacemacs-additional-packages '(kaolin-themes nord-theme)
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -153,11 +153,12 @@ values."
    ;; True if the home buffer should respond to resize events.
    dotspacemacs-startup-buffer-responsive t
    ;; Default major mode of the scratch buffer (default `text-mode')
-   dotspacemacs-scratch-mode 'text-mode
+   dotspacemacs-scratch-mode 'markdown-mode
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press <SPC> T n to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-dark
+   dotspacemacs-themes '(nord
+                         spacemacs-dark
                          spacemacs-light)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state t
@@ -347,18 +348,16 @@ you should place your code here."
   ;;   (load-theme 'kaolin-galaxy t))
   ;; (use-package kaolin-themes
   ;;   :config
-  (load-theme 'kaolin-galaxy t)
+  ;; (load-theme 'kaolin-galaxy t)
+  (load-theme 'nord t)
+
+  ;; disable option key
+  (setq ns-alternate-modifier nil)
 
   ;; split lines when too wide
   (add-hook 'markdown-mode-hook 'turn-on-auto-fill)
 
   (define-key evil-normal-state-map (kbd "RET") 'spacemacs/evil-search-clear-highlight)
-
-  (defun change-input ()
-    (set-language-environment "UTF-8")
-    (activate-input-method "latin-1-alt-postfix"))
-  (add-hook 'markdown-mode-hook 'change-input)
-  (add-hook 'text-mode-hook 'change-input)
 
   (add-hook 'go-mode-hook 'lsp)
   (add-hook 'rust-mode-hook 'lsp)
