@@ -23,6 +23,9 @@ do
   echo ""
 done
 
+rm -rf $HOME/.config
+ln -s $HOME/.dungeon_files/config $HOME/.config
+
 if [ -e $HOME/bin ]; then
   remove_file $HOME/bin
 fi
