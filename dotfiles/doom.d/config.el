@@ -106,4 +106,5 @@
   (tree-sitter-fold-enable t)
   (tree-sitter-fold-indicators-enable t))
 (map! :n "RET" #'evil-ex-nohighlight)
-(map! :n "SPC TAB" #'evil-switch-to-windows-last-buffer)
+;; Conflicts with `workspaces'
+;; (map! :n "SPC TAB" #'evil-switch-to-windows-last-buffer)
