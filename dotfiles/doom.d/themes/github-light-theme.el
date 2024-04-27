@@ -49,6 +49,7 @@
                       (line-number (:foreground github-light-gray-ll))
                       (lsp-face-highlight-textual (:background github-light-yellow-lll))
                       (lsp-face-highlight-read (:background github-light-yellow-lll))
+                      (lsp-headerline-breadcrumb-symbols-face (:foreground github-light-fg :weight 'bold))
                       (error (:foreground github-light-red)) ;; :background "#e3d2d2"))
                       (region (:background github-light-yellow-lll))
                       (isearch (:background github-light-blue-l))
@@ -56,6 +57,7 @@
                       (popup-tip-face (:background github-light-red-l :foreground github-light-fg))
                       (git-commit-summary (:foreground github-light-blue))
                       (git-commit-pseudo-header (:foreground github-light-blue))
+                      (success (:foreground github-light-green-d))
 
                       (doom-modeline-info (:foreground github-light-green-d))
                       (doom-modeline-buffer-file (:foreground github-light-blue))
