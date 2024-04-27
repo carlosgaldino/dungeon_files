@@ -120,10 +120,10 @@
   (after! lsp-mode
     (add-to-list 'lsp-language-id-configuration '(zig-mode . "zig"))
     (lsp-register-client
-      (make-lsp-client
-        :new-connection (lsp-stdio-connection "zls --config-path $HOME/zls.json")
-        :major-modes '(zig-mode)
-        :server-id 'zls))))
+     (make-lsp-client
+      :new-connection (lsp-stdio-connection "zls --config-path /Users/carlosgaldino/zls.json")
+      :major-modes '(zig-mode)
+      :server-id 'zls))))
 
 (after! beancount
   (setq-default lsp-beancount-langserver-executable "beancount-language-server"))
