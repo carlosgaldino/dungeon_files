@@ -46,7 +46,9 @@ values."
      ;; better-defaults
      dash
      emacs-lisp
-     git
+     (git :variables
+          git-commit-summary-max-length 50
+          git-commit-fill-column 72)
      github
      (go :variables
          gofmt-command "goimports"
@@ -357,6 +359,10 @@ you should place your code here."
 
   ;; (setq markdown-command "pandoc --toc --toc-depth=4 -s -f markdown+smart -t html -c http://blog.carlosgaldino.com/public/css/main.css -c http://blog.carlosgaldino.com/public/css/syntax.css")
   (setq markdown-command "pandoc --template=GitHub.html5")
+  (setq-default with-editor-emacsclient-executable "emacsclient")
+
+  (setq-default dotspacemacs-configuration-layers
+                '((git :variables git-enable-magit-delta-plugin t)))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
