@@ -1,0 +1,5 @@
+font-family = "MonoLisa"
+font-size = 14
+theme = Snazzy
+macos-option-as-alt = left
+copy-on-select = clipboard
