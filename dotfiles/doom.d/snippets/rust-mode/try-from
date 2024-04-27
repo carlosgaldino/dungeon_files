@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: impl TryFrom
+# key: tfrom
+# --
+impl TryFrom<${1:TryFrom}> for ${2:Type} {
+    type Error = ${3:Error};
+
+    fn try_from(source: $1) -> Self {
+       `%`$0
+       Self { }
+    }
+}
