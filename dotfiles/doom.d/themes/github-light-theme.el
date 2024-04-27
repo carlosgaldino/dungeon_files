@@ -84,7 +84,7 @@
                       (company-tooltip-scrollbar-thumb (:background github-light-yellow))
                       (company-tooltip-scrollbar-track (:background github-light-yellow-l))
 
-                      (header-line (:background github-light-bg :foreground github-light-fg :bold nil
+                      (header-line (:background github-light-bg :foreground github-light-gray-l :bold nil
                                     :box (:line-width 1 :color github-light-gray-lll)))
                       (mode-line-highlight (:background github-light-bg :bold nil
                                             :box (:line-width 1 :color github-light-gray-ll)))
@@ -104,6 +104,10 @@
                       (git-gutter:added (:foreground github-light-green :weight 'bold))
                       (git-gutter:deleted (:foreground github-light-red :weight 'bold))
                       (git-gutter:modified (:foreground github-light-yellow :weight 'bold))
+
+                      (git-timemachine-minibuffer-author-face (:inherit 'magit-log-author))
+                      (git-timemachine-minibuffer-detail-face (:inherit 'default))
+                      (git-timemachine-commit (:inherit 'magit-hash))
 
                       (minibuffer-prompt  (:inherit 'font-lock-builtin-face))
 
