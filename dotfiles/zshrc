@@ -1,6 +1,7 @@
 precmd_functions+=(set_win_title)
 
 source ~/.zshfunctions
+export PATH="/opt/homebrew/bin:$HOME/.cargo/bin:$HOME/bin:$HOME/.cache/rebar3/bin:$GOPATH/bin:$HOME/.cargo/bin:$HOME/.cabal/bin:$HOME/.gem/ruby/2.7.0/bin:/usr/local/bin:/usr/local/opt/ruby/bin:/usr/local/share/python:$PATH"
 
 eval "$(starship init zsh)"
 starship_precmd_user_func="set_win_title"
@@ -15,7 +16,6 @@ export RUST_SRC_PATH="$HOME/.rustup/toolchains/stable-x86_64-apple-darwin/lib/ru
 export GOPATH="$HOME/code/golang"
 export GO111MODULE="on"
 # export PATH="$HOME/.cargo/bin:$HOME/bin:/usr/local/opt/llvm/bin:$HOME/.cache/rebar3/bin:$GOPATH/bin:$HOME/.cargo/bin:$HOME/.cabal/bin:$HOME/.gem/ruby/2.7.0/bin:/usr/local/bin:/usr/local/opt/ruby/bin:/usr/local/share/python:$PATH"
-export PATH="$HOME/.cargo/bin:$HOME/bin:$HOME/.cache/rebar3/bin:$GOPATH/bin:$HOME/.cargo/bin:$HOME/.cabal/bin:$HOME/.gem/ruby/2.7.0/bin:/usr/local/bin:/usr/local/opt/ruby/bin:/usr/local/share/python:$PATH"
 
 export STARSHIP_CONFIG="$HOME/.starship.toml"
 
