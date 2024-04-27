@@ -60,6 +60,7 @@
                       (git-commit-pseudo-header (:foreground github-light-blue))
                       (success (:foreground github-light-green-d))
                       (fringe (:background github-light-gray-llll))
+                      (match (:inherit 'region))
 
                       (doom-modeline-info (:foreground github-light-green-d))
                       (doom-modeline-buffer-file (:foreground github-light-blue))

@@ -59,6 +59,7 @@
                       (git-commit-pseudo-header (:foreground github-dark-blue))
                       (success (:foreground github-dark-green-d))
                       (fringe (:background github-dark-gray-llll))
+                      (match (:background github-dark-yellow-ll))
 
                       (doom-modeline-info (:foreground github-dark-green-d))
                       (doom-modeline-buffer-file (:foreground github-dark-blue))
