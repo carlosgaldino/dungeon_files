@@ -22,3 +22,6 @@ symbol = "🔺 "
 
 [time]
 disabled = false
+
+[cmd_duration]
+disabled = true
