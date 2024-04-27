@@ -41,6 +41,7 @@
                       (github-dark-yellow "#845306")
 
                       (github-dark-yellow-l "#693e00")
+                      (github-dark-yellow-ll "#845306")
                       (github-dark-yellow-lll "#262219")
                       (github-dark-pink "#7d2457")
                       (github-dark-blue-ll "#0d419d"))
@@ -51,8 +52,8 @@
                       (lazy-highlight (:background github-dark-blue-ll))
                       (highlight (:background github-dark-bg-hl))
                       (line-number (:foreground github-dark-gray-ll))
-                      (lsp-face-highlight-textual (:background github-dark-yellow-lll))
-                      (lsp-face-highlight-read (:background github-dark-yellow-lll))
+                      (lsp-face-highlight-textual (:background github-dark-yellow-l))
+                      (lsp-face-highlight-read (:background github-dark-yellow-l))
                       (lsp-headerline-breadcrumb-symbols-face (:foreground github-dark-fg :weight 'bold))
                       (error (:foreground github-dark-red)) ;; :background "#e3d2d2"))
                       (region (:background github-dark-yellow-lll))
