@@ -152,3 +152,6 @@
 (setq-default blink-cursor-mode 0)
 (blink-cursor-mode t)
 (setq-default blink-cursor-blinks 0)
+
+(use-package! zone)
+(zone-when-idle 60)
