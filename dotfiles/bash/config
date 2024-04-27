@@ -41,7 +41,7 @@ source $(rustc --print sysroot)/etc/bash_completion.d/cargo
 # jenv
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
 
-complete -o default -o nospace -F _git g
+__git_complete g __git_main
 
 starship_precmd_user_func="set_win_title"
 
