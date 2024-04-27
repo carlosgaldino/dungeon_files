@@ -96,6 +96,8 @@
   (lsp-ui-sideline-show-hover nil)
   (lsp-ui-doc-enable nil)
   (lsp-ui-sideline-show-diagnostics nil))
+(use-package! magit
+  :hook (magit-mode . magit-delta-mode))
 
 (after! kaolin-themes
   (kaolin-treemacs-theme))
