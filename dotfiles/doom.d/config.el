@@ -16,6 +16,8 @@
 (setq doom-modeline-enable-word-count t)
 (setq deft-directory "~/notes")
 
+(add-to-list 'initial-frame-alist '(fullscreen . fullboth))
+
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
 ;; - `doom-font' -- the primary font to use
