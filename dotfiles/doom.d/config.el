@@ -154,4 +154,4 @@
 (setq-default blink-cursor-blinks 0)
 
 (use-package! zone)
-(zone-when-idle 60)
+(zone-when-idle 300)
