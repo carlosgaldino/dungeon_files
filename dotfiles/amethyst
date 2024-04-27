@@ -30,5 +30,7 @@
     "com.webex.meetingmanager",
     "com.apple.iCal",
     "com.todoist.mac.Todoist",
+    "com.apple.AppStore",
+    "com.apple.ActivityMonitor",
   ]
 }
