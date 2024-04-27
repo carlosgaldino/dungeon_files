@@ -109,6 +109,9 @@
   (tree-sitter-fold-enable t)
   (tree-sitter-fold-indicators-enable t))
 
+(after! flycheck
+  ;; Disable highlighting errors in the buffer.
+  (setq flycheck-highlighting-mode nil))
 (after! kaolin-themes
   (kaolin-treemacs-theme))
 (after! lsp
