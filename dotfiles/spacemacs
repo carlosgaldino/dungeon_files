@@ -68,7 +68,8 @@ values."
           lsp-rust-server 'rust-analyzer
           lsp-rust-analyzer-server-display-inlay-hints t
           lsp-rust-analyzer-cargo-watch-command "clippy"
-          lsp-rust-analyzer-cargo-watch-args ["--all-targets"])
+          lsp-rust-analyzer-cargo-watch-args ["--all-targets"]
+          cargo-process-reload-on-modify t)
           ;; lsp-rust-analyzer-display-parameter-hints t)
      markdown
      (org :variables
@@ -95,7 +96,9 @@ values."
                      spell-checking-enable-auto-dictionary t
                      enable-flyspell-auto-completion t)
      (rust :variables
-           rust-format-on-save t)
+           rust-format-on-save t
+           ;; rust-format-show-buffer nil
+           rust-format-goto-problem nil)
      (syntax-checking :variables
                       syntax-checking-enable-tooltips nil)
      (unicode-fonts :variables
@@ -103,8 +106,7 @@ values."
                     unicode-fonts-enable-ligatures t)
      version-control
      xkcd
-     yaml
-     )
+     yaml)
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
