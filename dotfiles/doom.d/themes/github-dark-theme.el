@@ -41,6 +41,12 @@
                       ;; (mode-line-highlight (:foreground github-dark-bg-hl :box nil :bold nil))
                       ;; (mode-line-emphasis  (:foreground github-dark-bg-hl))
 
+                      (magit-branch-remote (:inherit 'font-lock-keyword-face))
+                      (magit-branch-local (:inherit 'font-lock-builtin-face))
+                      (magit-section-heading (:foreground github-dark-type-arg))
+                      (magit-section-highlight (:background github-dark-bg-hl))
+                      (magit-hash (:foreground github-dark-comment))
+                      (magit-refname (:foreground github-dark-comment))
 
                       (font-lock-doc-face (:foreground github-dark-comment :slant 'italic))
                       (font-lock-builtin-face (:foreground github-dark-keyword-constant))
