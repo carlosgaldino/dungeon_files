@@ -105,7 +105,7 @@
 ;;               ("C-<tab>" . 'copilot-accept-completion-by-word)))
 ;; accept completion from copilot and fallback to company
 (use-package! copilot
-  :hook (prog-mode . copilot-mode)
+  ;; :hook (prog-mode . copilot-mode)
   :bind (:map copilot-completion-map
               ("<tab>" . 'copilot-accept-completion)
               ("TAB" . 'copilot-accept-completion)
@@ -212,7 +212,7 @@
 
 (defun copilot-mode-line ()
   (if (bound-and-true-p copilot-mode)
-      (add-to-list 'global-mode-string '(" "))
+      (add-to-list 'global-mode-string '("  "))
     (setq global-mode-string ())))
 (add-hook 'copilot-mode-hook #'copilot-mode-line)
 (add-hook 'html-mode-hook '(lambda () (setq-local apheleia-inhibit t)))
