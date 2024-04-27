@@ -37,7 +37,7 @@
                       ;; (github-dark-blue-l "#79c0ff")
                       (github-dark-blue-l "#58a6ff")
                       (github-dark-green "#196c2e")
-                      (github-dark-green-d "#238636")
+                      (github-dark-green-d "#2ea043")
                       (github-dark-yellow "#845306")
 
                       (github-dark-yellow-l "#693e00")
