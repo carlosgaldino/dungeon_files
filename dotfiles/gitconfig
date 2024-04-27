@@ -6,9 +6,9 @@
 [core]
 	excludesfile = /Users/carlosgaldino/.gitignore
   editor = vim
-  pager = delta --paging 'always' --theme='Sublime Snazzy' # --file-color="white" --minus-color="#ff5b56" --plus-color="#49c876" --plus-emph-color="#048045" # --plus-color="#5ad18d" --dark # --theme="GitHub" --light
+  pager = delta --paging 'always' --syntax-theme='Sublime Snazzy'
 [interactive]
-  diffFilter = delta --color-only # --file-color="white" --minus-color="#ff5b56" --plus-color="#49c876" --plus-emph-color="#048045"
+  diffFilter = delta --color-only
 [commit]
   verbose = true
 [alias]
