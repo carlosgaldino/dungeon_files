@@ -73,13 +73,13 @@
 
                       (evil-ex-substitute-replacement (:foreground github-light-red :underline t))
 
-                      (company-tooltip (:background github-light-gray-lll :foreground github-light-fg))
+                      (company-tooltip (:foreground github-light-fg))
                       (company-tooltip-annotation (:foreground github-light-gray-d))
                       (company-tooltip-selection (:background github-light-yellow-lll :foreground github-light-fg))
                       (company-tooltip-search (:background github-light-yellow-lll :foreground github-light-fg))
                       (company-tooltip-search-selection (:background github-light-yellow-lll :foreground github-light-fg))
                       ;; (company-tooltip-mouse (:background github-light-yellow-lll :foreground github-light-fg))
-                      (company-tooltip-mouse (:background github-light-gray-lll :foreground github-light-fg))
+                      (company-tooltip-mouse (:foreground github-light-fg))
                       (company-tooltip-common (:foreground github-light-gray-d))
                       (company-echo-common (:foreground github-light-gray-d))
                       (company-tooltip-scrollbar-thumb (:background github-light-yellow))
