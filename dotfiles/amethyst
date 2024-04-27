@@ -1,7 +1,7 @@
 {
   "layouts": [
-    "floating",
     "fullscreen",
+    "floating",
     "3column-left",
     "two-pane",
     "3column-middle",
@@ -20,6 +20,7 @@
     "com.kapeli.dashdoc",
     "com.tomito.tomito",
     "com.agilebits.onepassword7",
+    "com.1password.1password",
     "com.apple.finder",
     "com.tuple.app",
     "md.obsidian",
