@@ -116,7 +116,8 @@
 (after! kaolin-themes
   (kaolin-treemacs-theme))
 (after! lsp
-  (setq lsp-headerline-breadcrumb-enable t))
+  (setq lsp-headerline-breadcrumb-enable t)
+  (setq lsp-headerline-breadcrumb-enable-diagnostics nil))
 (map! :n "RET" #'evil-ex-nohighlight)
 (map! :desc "Open documentation for symbol"
       :map rust-mode-map
