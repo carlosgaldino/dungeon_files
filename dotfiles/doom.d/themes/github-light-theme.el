@@ -23,7 +23,7 @@
                       (github-light-gray-d "#6e7781")
                       (github-light-orange "#bc4c00")
                       (github-light-coral "#ec6547")
-                      (github-light-fn "#6639ba")
+                      (github-light-purple "#6639ba")
                       (github-light-keyword "#cf222e")
                       (github-light-keyword-constant "#0550ae")
                       ;; (github-light-red "#f85149")
@@ -56,7 +56,12 @@
                       (doom-modeline-info (:foreground github-light-green-d))
                       (doom-modeline-buffer-file (:foreground github-light-blue))
                       (doom-modeline-buffer-major-mode (:foreground github-light-blue-d))
+                      (doom-modeline-buffer-modified (:foreground github-light-red :weight 'bold))
                       (doom-modeline-panel (:background github-light-blue-l :box nil :bold nil))
+                      (doom-modeline-evil-visual-state (:foreground github-light-purple))
+                      (doom-modeline-evil-insert-state (:foreground github-light-green-d))
+                      (doom-modeline-evil-normal-state (:foreground github-light-blue))
+                      (doom-modeline-warning (:foreground github-light-red :weight 'bold))
 
                       (lsp-modeline-code-actions-face (:foreground github-light-yellow))
 
@@ -80,7 +85,7 @@
                       ;;
                       (git-gutter:added (:foreground github-light-green :weight 'bold))
                       (git-gutter:deleted (:foreground github-light-red :weight 'bold))
-                      (git-gutter:modified (:foreground github-light-red-ll :weight 'bold))
+                      (git-gutter:modified (:foreground github-light-red-l :weight 'bold))
 
                       (minibuffer-prompt  (:inherit 'font-lock-builtin-face))
 
@@ -92,12 +97,15 @@
                       (magit-refname (:foreground github-light-gray-l))
                       (magit-tag (:foreground github-light-coral))
 
+                      (nerd-icons-red (:foreground github-light-red))
+                      (nerd-icons-lred (:foreground github-light-red-l))
+
                       (font-lock-doc-face (:foreground github-light-gray-d)) ;; :slant 'italic))
                       (font-lock-builtin-face (:foreground github-light-keyword-constant))
                       (font-lock-constant-face (:foreground github-light-keyword-constant))
                       (font-lock-comment-face (:foreground github-light-gray-l));; :slant 'italic))
-                      (font-lock-function-name-face (:foreground github-light-fn))
-                      (font-lock-function-call-face (:foreground github-light-fn))
+                      (font-lock-function-name-face (:foreground github-light-purple))
+                      (font-lock-function-call-face (:foreground github-light-purple))
                       (font-lock-keyword-face (:foreground github-light-keyword))
                       (font-lock-number-face (:foreground github-light-blue))
                       (font-lock-string-face (:foreground github-light-blue-d))
@@ -121,7 +129,7 @@
                       (tree-sitter-hl-face:string (:inherit 'font-lock-string-face))
                       (tree-sitter-hl-face:type (:inherit 'font-lock-type-face))
                       ;; (tree-sitter-hl-face:type.argument (:foreground github-light-type))
-                      (tree-sitter-hl-face:variable (:foreground github-light-fg))
+                      (tree-sitter-hl-face:variable (:inherit 'default))
                       (tree-sitter-hl-face:variable.parameter (:foreground github-light-coral))
                       )
 
