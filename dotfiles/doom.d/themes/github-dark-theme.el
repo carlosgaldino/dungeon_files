@@ -60,6 +60,7 @@
                       (success (:foreground github-dark-green-d))
                       (fringe (:background github-dark-gray-llll))
                       (match (:background github-dark-yellow-ll))
+                      (+workspace-tab-selected-face (:inherit 'match))
 
                       (doom-modeline-info (:foreground github-dark-green-d))
                       (doom-modeline-buffer-file (:foreground github-dark-blue))
