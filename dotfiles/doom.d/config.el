@@ -124,6 +124,8 @@
         :major-modes '(zig-mode)
         :server-id 'zls))))
 
+(after! beancount
+  (setq-default lsp-beancount-langserver-executable "beancount-language-server"))
 (after! flycheck
   ;; Disable highlighting errors in the buffer.
   (setq flycheck-highlighting-mode nil))
