@@ -32,10 +32,9 @@
     "com.todoist.mac.Todoist",
     "com.apple.AppStore",
     "com.apple.ActivityMonitor",
-    "com.apple.ist.AppleDirectory6",
     "com.jetbrains.CLion",
     "com.apple.ActivityMonitor",
-    "com.jamfsoftware.selfservice.mac",
     "com.runningwithcrayons.Alfred-Preferences",
+    "com.apple.calculator",
   ]
 }
