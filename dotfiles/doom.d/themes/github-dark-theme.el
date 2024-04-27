@@ -51,7 +51,7 @@
                       (default (:foreground github-dark-fg :background github-dark-bg))
                       (lazy-highlight (:background github-dark-blue-ll))
                       (highlight (:background github-dark-bg-hl))
-                      (line-number (:foreground github-dark-gray-ll))
+                      (line-number (:foreground github-dark-gray-l))
                       (lsp-face-highlight-textual (:background github-dark-yellow-l))
                       (lsp-face-highlight-read (:background github-dark-yellow-l))
                       (lsp-headerline-breadcrumb-symbols-face (:foreground github-dark-fg :weight 'bold))
@@ -108,7 +108,7 @@
                       ;;
                       (git-gutter:added (:foreground github-dark-green :weight 'bold))
                       (git-gutter:deleted (:foreground github-dark-red :weight 'bold))
-                      (git-gutter:modified (:foreground github-dark-red-l :weight 'bold))
+                      (git-gutter:modified (:foreground github-dark-yellow :weight 'bold))
 
                       (minibuffer-prompt  (:inherit 'font-lock-builtin-face))
 

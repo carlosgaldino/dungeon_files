@@ -102,7 +102,7 @@
                       ;;
                       (git-gutter:added (:foreground github-light-green :weight 'bold))
                       (git-gutter:deleted (:foreground github-light-red :weight 'bold))
-                      (git-gutter:modified (:foreground github-light-red-l :weight 'bold))
+                      (git-gutter:modified (:foreground github-light-yellow :weight 'bold))
 
                       (minibuffer-prompt  (:inherit 'font-lock-builtin-face))
 
