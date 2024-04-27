@@ -66,9 +66,14 @@ values."
           lsp-rust-analyzer-server-display-inlay-hints t)
           ;; lsp-rust-analyzer-display-parameter-hints t)
      markdown
-     org
+     (org :variables
+          org-want-todo-bindings t
+          org-todo-keywords '((sequence "TODO" "IN-PROGRESS" "|" "DONE" "CANCELLED"))
+          org-todo-keyword-faces
+          '(("TODO" . org-warning) ("IN-PROGRESS" . "yellow")
+            ("DONE" . org-done) ("CANCELLED" . (:strike-through t)))
+          org-fontify-done-headline t)
      python
-     ;; org
      (tree-sitter :variables
                   tree-sitter-syntax-highlight-enable t
                   tree-sitter-fold-enable t
