@@ -31,7 +31,7 @@ setopt APPEND_HISTORY
 setopt share_history
 setopt hist_ignore_all_dups
 
-CDPATH=.:~:~/code
+CDPATH=.:~:~/code:$GOPATH/src/github.com/carlosgaldino
 
 # export PS1='\[\033[0;32m\]\w\[\033[0;35m\]`git_ps1` \[\033[0;34m\][\j] \[\033[0;30m\]${RUBY_VERSION} \[\033[1;36m\]\$\[\033[0m\] '
 # PROMPT_COMMAND='echo -ne "\033]0;${PWD##*/}\007"'
