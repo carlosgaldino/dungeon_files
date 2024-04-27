@@ -41,7 +41,7 @@
 
                      (
                       (link (:foreground github-dark-blue :underline t))
-                      (homoglyph (:foreground github-dark-yellow))
+                      (homoglyph (:inherit 'warning))
                       (cursor (:background github-dark-fg))
                       (default (:foreground github-dark-fg :background github-dark-bg))
                       (lazy-highlight (:background github-dark-blue-ll))
@@ -50,11 +50,11 @@
                       (lsp-face-highlight-textual (:background github-dark-yellow-l))
                       (lsp-face-highlight-read (:background github-dark-yellow-l))
                       (lsp-headerline-breadcrumb-symbols-face (:foreground github-dark-fg :weight 'bold))
-                      (lsp-treemacs-file-warn (:foreground github-dark-yellow))
+                      (lsp-treemacs-file-warn (:inherit 'warning))
                       (error (:foreground github-dark-red)) ;; :background "#e3d2d2"))
                       (region (:background github-dark-yellow-lll))
                       (isearch (:background github-dark-blue-l))
-                      (warning (:foreground github-dark-coral))
+                      (warning (:foreground "#bb8009"))
                       (popup-tip-face (:background github-dark-red-l :foreground github-dark-fg))
                       (git-commit-summary (:foreground github-dark-blue))
                       (git-commit-pseudo-header (:foreground github-dark-blue))
