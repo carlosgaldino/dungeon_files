@@ -190,9 +190,7 @@ values."
    dotspacemacs-themes '(doom-tokyo-night
                          doom-one-light
                          nord
-                         ;; catppuccin-macchiato
-                         spacemacs-dark
-                         spacemacs-light)
+                         catppuccin)
    ;; If non nil the cursor color matches the state color in GUI Emacs.
    dotspacemacs-colorize-cursor-according-to-state nil
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
@@ -380,6 +378,7 @@ you should place your code here."
 
   ;; disable option key
   (setq ns-alternate-modifier nil)
+  (setq catppuccin-flavor 'macchiato)
 
   ;; split lines when too wide
   (add-hook 'markdown-mode-hook 'turn-on-auto-fill)
