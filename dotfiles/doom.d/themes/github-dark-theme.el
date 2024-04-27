@@ -93,10 +93,13 @@
                       (mode-line-highlight (:background github-dark-bg :bold nil
                                             :box (:line-width 1 :color github-dark-gray-ll)))
 
+                      (window-divider (:foreground github-dark-gray-lll))
+                      (vertical-border (:foreground github-dark-gray-lll))
                       (mode-line (:background github-dark-bg :foreground github-dark-fg :bold nil
                                   :box (:line-width 1 :color github-dark-gray-lll)))
                       (mode-line-inactive (:background github-dark-bg :foreground github-dark-gray-l :bold nil
                                            :box (:line-width 1 :color github-dark-gray-lll)))
+                      ;; (mode-line-buffer-id (:background 'unspecified :foreground "pink" :bold nil))
                                         ; (mode-line-inactive  (:background github-dark-bg :foreground github-dark-fg :bold nil
                       ;;                       :box (:line-width 2 :color github-dark-bg-hl)))
                       ;; (mode-line-buffer-id (:background 'unspecified :foreground github-dark-fg :bold nil))

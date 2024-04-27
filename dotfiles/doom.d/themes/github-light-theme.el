@@ -88,6 +88,8 @@
                       (mode-line-highlight (:background github-light-bg :bold nil
                                             :box (:line-width 1 :color github-light-gray-ll)))
 
+                      (window-divider (:foreground github-light-gray-lll))
+                      (vertical-border (:foreground github-light-gray-lll))
                       (mode-line (:background github-light-bg :foreground github-light-fg :bold nil
                                   :box (:line-width 1 :color github-light-gray-lll)))
                       (mode-line-inactive (:background github-light-bg :foreground github-light-gray-l :bold nil
