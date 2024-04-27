@@ -1,7 +1,6 @@
 ;; -*- mode: emacs-lisp -*-
 ;; This file is loaded by Spacemacs at startup.
 ;; It must be stored in your home directory.
-
 (defun dotspacemacs/layers ()
   "Configuration Layers declaration.
 You should not put any user code in this function besides modifying the variable
@@ -68,9 +67,10 @@ values."
           ;; lsp-rust-analyzer-display-parameter-hints t)
      markdown
      ;; org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
+     (shell :variables
+            shell-default-height 30
+            shell-default-position 'bottom
+            terminal-here-mac-terminal-command 'iterm2)
      (spell-checking :variables
                      spell-checking-enable-by-default nil
                      spell-checking-enable-auto-dictionary t
@@ -80,6 +80,7 @@ values."
      (syntax-checking :variables
                       syntax-checking-enable-tooltips nil)
      version-control
+     xkcd
      yaml
      )
    ;; List of additional packages that will be installed without being
