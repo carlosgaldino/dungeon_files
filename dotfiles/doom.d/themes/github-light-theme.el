@@ -128,6 +128,7 @@
                       (magit-log-graph (:inherit 'font-lock-string-face))
                       (magit-process-ng (:inherit 'error))
                       (magit-proccess-ok (:inherit 'success))
+                      (magit-diff-lines-heading (:background github-light-purple :foreground github-light-bg))
                       (magit-blame-heading (:background github-light-gray-ll))
                       (magit-blame-name (:inherit 'magit-log-author))
                       (magit-blame-date (:foreground github-light-gray-d))
