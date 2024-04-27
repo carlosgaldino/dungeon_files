@@ -95,41 +95,34 @@
   (setq auto-dark-light-theme 'github-light))
 (use-package! company-box
   :hook (company-mode . company-box-mode))
-;; ;; accept completion from copilot and fallback to company
+;; accept completion from copilot and fallback to company
 ;; (use-package! copilot
-;;   :hook (prog-mode . copilot-mode)
+;;   ;; :hook (prog-mode . copilot-mode)
+;;   ;; :if (and (bound-and-true-p copilot-mode))
 ;;   :bind (:map copilot-completion-map
 ;;               ("<tab>" . 'copilot-accept-completion)
 ;;               ("TAB" . 'copilot-accept-completion)
 ;;               ("C-TAB" . 'copilot-accept-completion-by-word)
-;;               ("C-<tab>" . 'copilot-accept-completion-by-word)))
-;; accept completion from copilot and fallback to company
-(use-package! copilot
-  ;; :hook (prog-mode . copilot-mode)
-  :bind (:map copilot-completion-map
-              ("<tab>" . 'copilot-accept-completion)
-              ("TAB" . 'copilot-accept-completion)
-              ("C-TAB" . 'copilot-accept-completion-by-word)
-              ("C-<tab>" . 'copilot-accept-completion-by-word)
-              ("C-S-TAB" . 'copilot-accept-completion-by-line)
-              ("C-S-<tab>" . 'copilot-accept-completion-by-line)
-              ("C-ESC" . 'copilot-next-completion)
-              ("C-S-ESC" . 'copilot-previous-completion)))
+;;               ("C-<tab>" . 'copilot-accept-completion-by-word)
+;;               ("C-S-TAB" . 'copilot-accept-completion-by-line)
+;;               ("C-S-<tab>" . 'copilot-accept-completion-by-line)
+;;               ("C-ESC" . 'copilot-next-completion)
+;;               ("C-S-ESC" . 'copilot-previous-completion)))
 
-(after! (evil copilot)
-  ;; Define the custom function that either accepts the completion or does the default behavior
-  (defun my/copilot-tab-or-default ()
-    (interactive)
-    (if (and (bound-and-true-p copilot-mode)
-             ;; Add any other conditions to check for active copilot suggestions if necessary
-             )
-        (copilot-accept-completion)
-      (evil-insert 1))) ; Default action to insert a tab. Adjust as needed.
+;; (after! (evil copilot)
+;;   ;; Define the custom function that either accepts the completion or does the default behavior
+;;   (defun my/copilot-tab-or-default ()
+;;     (interactive)
+;;     (if (and (bound-and-true-p copilot-mode)
+;;              ;; Add any other conditions to check for active copilot suggestions if necessary
+;;              )
+;;         (copilot-accept-completion)
+;;       (evil-insert 1))) ; Default action to insert a tab. Adjust as needed.
 
-  ;; Bind the custom function to <tab> in Evil's insert state
-  (evil-define-key 'insert 'global (kbd "<tab>") 'my/copilot-tab-or-default))
-(use-package! all-the-icons
-  :if (display-graphic-p))
+;;   ;; Bind the custom function to <tab> in Evil's insert state
+;;   (evil-define-key 'insert 'global (kbd "<tab>") 'my/copilot-tab-or-default))
+;; (use-package! all-the-icons
+;;   :if (display-graphic-p))
 (use-package! literate-calc-mode
   :ensure t)
 (use-package! lsp
