@@ -64,6 +64,7 @@
                       (fringe (:background github-light-gray-llll))
                       (match (:inherit 'region))
                       (+workspace-tab-selected-face (:inherit 'region))
+                      (sh-quoted-exec (:inherit 'font-lock-string-face))
 
                       (doom-modeline-info (:foreground github-light-green-d))
                       (doom-modeline-buffer-file (:foreground github-light-blue))
