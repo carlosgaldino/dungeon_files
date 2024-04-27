@@ -205,5 +205,11 @@
   ;; force update evil keymaps after git-timemachine-mode loaded
   (add-hook 'git-timemachine-mode-hook #'evil-normalize-keymaps))
 
+(defun copilot-mode-line ()
+  (if (bound-and-true-p copilot-mode)
+      (add-to-list 'global-mode-string '(" "))
+    (setq global-mode-string ())))
+(add-hook 'copilot-mode-hook #'copilot-mode-line)
+
 ;; (use-package! zone)
 ;; (zone-when-idle 300)
