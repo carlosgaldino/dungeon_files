@@ -3,6 +3,9 @@ precmd_functions+=(set_win_title)
 source ~/.zshfunctions
 export PATH="/opt/homebrew/bin:$HOME/.cargo/bin:$HOME/bin:$HOME/.cache/rebar3/bin:$GOPATH/bin:$HOME/.cargo/bin:$HOME/.cabal/bin:$HOME/.gem/ruby/2.7.0/bin:/usr/local/bin:/usr/local/opt/ruby/bin:/usr/local/share/python:$PATH"
 
+# work
+export PATH="$PYENV_ROOT/bin:/usr/local/bin:$PATH"
+
 eval "$(starship init zsh)"
 starship_precmd_user_func="set_win_title"
 
@@ -43,6 +46,11 @@ fpath=(~/.zsh $fpath)
 autoload -Uz compinit && compinit
 # autoload -Uz ~/.zsh/*(:t)
 unsetopt completealiases
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+  eval "$(pyenv global 3.10.2)"
+fi
 
 # case-insensitive
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'

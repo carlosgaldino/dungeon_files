@@ -28,8 +28,8 @@
   ff = merge --ff-only
   noff = merge --no-ff --no-edit
   fix = commit --amend -C HEAD
-  pom = push origin master
-  clearbranches = "!sh -ec 'git checkout master; git branch --merged | grep -v master | xargs git branch -d; git checkout -' -"
+  pom = push origin main
+  clearbranches = "!sh -ec 'git checkout main; git branch --merged | grep -v main | xargs git branch -d; git checkout -' -"
   undo = reset HEAD~
   unstage = restore --staged
 
@@ -56,7 +56,7 @@
 [push]
 	default = simple
 
-# 
+#
 #   [alias]
 #   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 #   lgs = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --first-parent --no-merges --author="Pato"
@@ -81,3 +81,7 @@
 #   ignore = update-index --assume-unchanged
 #   unignore = update-index --no-assume-unchanged
 # [core]
+[init]
+	defaultBranch = main
+[pull]
+	ff = only

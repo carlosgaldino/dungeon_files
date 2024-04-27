@@ -6,8 +6,8 @@ export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWUPSTREAM=auto
 export RUST_SRC_PATH="$HOME/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src"
 export GOPATH="$HOME/code/golang"
-export GO111MODULE="auto"
-export PATH="$HOME/bin:/usr/local/opt/llvm/bin:$HOME/.cache/rebar3/bin:$GOPATH/bin:$HOME/.cargo/bin:$HOME/.cabal/bin:$HOME/.gem/ruby/2.7.0/bin:/usr/local/bin:/usr/local/opt/ruby/bin:/usr/local/share/python:$PATH"
+export GO111MODULE="on"
+export PATH="$HOME/bin:/usr/local/opt/llvm/bin:/usr/local/bin:$HOME/.cache/rebar3/bin:$GOPATH/bin:$HOME/.cargo/bin:$HOME/.cabal/bin:$HOME/.gem/ruby/2.7.0/bin:/usr/local/opt/ruby/bin:/usr/local/share/python:$PATH"
 
 export STARSHIP_CONFIG="$HOME/.starship.toml"
 
@@ -16,7 +16,7 @@ export HISTCONTROL=ignoredups:erasedups
 # Store 10k history entries
 export HISTSIZE=10000
 # Append to the history file when exiting instead of overwriting it
-shopt -s histappend
+# shopt -s histappend
 
 CDPATH=.:~:~/code
 
@@ -28,15 +28,15 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 [[ -f `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 # bash completion
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
-fi
+# if [ -f `brew --prefix`/etc/bash_completion ]; then
+#   . `brew --prefix`/etc/bash_completion
+# fi
 
 # chruby
 [ -f `brew --prefix`/opt/chruby/share/chruby/chruby.sh ] && source `brew --prefix`/opt/chruby/share/chruby/chruby.sh
 [ -f  `brew --prefix`/share/chruby/auto.sh ] && source `brew --prefix`/share/chruby/auto.sh
 
-source $(rustc --print sysroot)/etc/bash_completion.d/cargo
+# source $(rustc --print sysroot)/etc/bash_completion.d/cargo
 
 # jenv
 if which jenv > /dev/null; then eval "$(jenv init -)"; fi
