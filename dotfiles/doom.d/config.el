@@ -198,5 +198,10 @@
 (blink-cursor-mode t)
 (setq-default blink-cursor-blinks 0)
 
-(use-package! zone)
-(zone-when-idle 300)
+(with-eval-after-load 'git-timemachine
+  (evil-make-overriding-map git-timemachine-mode-map 'normal)
+  ;; force update evil keymaps after git-timemachine-mode loaded
+  (add-hook 'git-timemachine-mode-hook #'evil-normalize-keymaps))
+
+;; (use-package! zone)
+;; (zone-when-idle 300)
