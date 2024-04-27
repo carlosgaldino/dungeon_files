@@ -12,7 +12,7 @@
 [commit]
   verbose = true
 [alias]
-  st = !git-number
+  st = status
   ci = commit
   co = checkout
   cp = cherry-pick

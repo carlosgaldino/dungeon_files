@@ -28,7 +28,7 @@ elif ls -G -d . >/dev/null 2>&1; then
 fi
 
 # Git
-alias g="git-number"
+alias g="git"
 alias me="git config --local user.email carloshsgaldino@gmail.com"
 
 # bundler
