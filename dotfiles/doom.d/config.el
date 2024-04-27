@@ -98,7 +98,6 @@
   (lsp-signature-doc-lines 1)
   (lsp-signature-render-documentation nil)
   (lsp-rust-analyzer-cargo-watch-command "clippy")
-  (lsp-rust-analyzer-cargo-watch-args ["--all-targets"])
   (lsp-rust-analyzer-server-display-inlay-hints t)
   (cargo-process-reload-on-modify t))
 (use-package! lsp-ui
@@ -123,7 +122,6 @@
   (setq lsp-headerline-breadcrumb-enable t)
   (setq lsp-headerline-breadcrumb-enable-diagnostics nil))
 (after! rustic
-  (setq rustic-cargo-check-arguments "--all-targets")
   (setq rustic-default-clippy-arguments "--workspace --all-targets")
   (setq rustic-default-test-arguments "--workspace --all-targets"))
 (map! :n "RET" #'evil-ex-nohighlight)
