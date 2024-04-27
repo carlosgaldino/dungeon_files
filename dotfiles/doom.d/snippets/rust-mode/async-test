@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: async test
+# key: atest
+# uuid: atest
+# --
+#[tokio::test]
+async fn ${1:test_name}() {
+    `%`$0
+}
