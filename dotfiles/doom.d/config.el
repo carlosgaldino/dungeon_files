@@ -114,5 +114,9 @@
 (after! lsp
   (setq lsp-headerline-breadcrumb-enable t))
 (map! :n "RET" #'evil-ex-nohighlight)
+(map! :desc "Open documentation for symbol"
+      :map rust-mode-map
+      :localleader
+      "d" #'lsp-rust-analyzer-open-external-docs)
 ;; Conflicts with `workspaces'
 ;; (map! :n "SPC TAB" #'evil-switch-to-windows-last-buffer)
