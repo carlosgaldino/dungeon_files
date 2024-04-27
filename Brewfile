@@ -1,28 +1,38 @@
-update
+tap "d12frosted/emacs-plus"
 
-upgrade
+brew "awscli"
+brew "btop"
+brew "curl"
+brew "ffmpeg"
+brew "fish"
+brew "gcc"
+brew "git"
+brew "git-delta"
+brew "go"
+brew "graphviz"
+brew "imagemagick"
+brew "jless"
+brew "jq"
+brew "libgccjit"
+brew "make"
+brew "openssl"
+brew "pandoc"
+brew "ripgrep"
+brew "starship"
+brew "tree"
+brew "vim"
 
-install git
-install vim
-install the_silver_searcher
-install autojump
-install chruby
-install ruby-install
-install bash-completion
-install colordiff
+brew "d12frosted/emacs-plus/emacs-plus", args: ["with-imagemagick", "with-modern-doom-icon", "with-native-comp", "with-poll"]
 
-# used by `post-commit-image` git hook
-install imagesnap
-
-# `gifify` dependencies
-install imagemagick
-install gifsicle
-install ffmpeg
-
-install youtube-dl
-install heroku-toolbelt
-
-# Remove outdated versions
-cleanup
+cask "amethyst"
+cask "iterm2"
+cask "linear-linear"
+cask "monodraw"
+cask "notion"
+cask "obsidian"
+cask "slack"
+cask "spotify"
+cask "ticktick"
+cask "zoom"
 
 # vim: set ft=ruby :
