@@ -1,7 +1,8 @@
 precmd_functions+=(set_win_title)
 
 source ~/.zshfunctions
-export PATH="/opt/homebrew/bin:$HOME/.cargo/bin:$HOME/bin:$HOME/.cache/rebar3/bin:$GOPATH/bin:$HOME/.cargo/bin:$HOME/.cabal/bin:$HOME/.gem/ruby/2.7.0/bin:/usr/local/bin:/usr/local/opt/ruby/bin:/usr/local/share/python:$PATH"
+export GOPATH="$HOME/code/golang"
+export PATH="/opt/homebrew/opt/openjdk/bin:/opt/homebrew/bin:$HOME/.cargo/bin:$HOME/bin:$HOME/.cache/rebar3/bin:$GOPATH/bin:$HOME/.cargo/bin:$HOME/.cabal/bin:$HOME/.gem/ruby/2.7.0/bin:/usr/local/bin:/usr/local/opt/ruby/bin:/usr/local/share/python:$PATH"
 
 # work
 export PATH="$PYENV_ROOT/bin:/usr/local/bin:$PATH"
@@ -16,7 +17,6 @@ export GIT_PS1_SHOWSTASHSTATE=1
 export GIT_PS1_SHOWUNTRACKEDFILES=1
 export GIT_PS1_SHOWUPSTREAM=auto
 export RUST_SRC_PATH="$HOME/.rustup/toolchains/stable-x86_64-apple-darwin/lib/rustlib/src/rust/src"
-export GOPATH="$HOME/code/golang"
 export GO111MODULE="on"
 
 export STARSHIP_CONFIG="$HOME/.starship.toml"

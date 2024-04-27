@@ -52,6 +52,7 @@ values."
           git-commit-fill-column 72
           git-enable-magit-delta-plugin t)
      (go :variables
+         go-backend 'lsp
          gofmt-command "goimports"
          go-format-before-save t)
      html
