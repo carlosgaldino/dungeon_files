@@ -1,11 +1,11 @@
 {
   "layouts": [
+    "floating",
     "fullscreen",
     "tall",
     "wide",
     "column",
     "row",
-    "floating",
     "widescreen-tall",
     "3column-left",
   ],
