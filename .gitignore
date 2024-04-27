@@ -4,3 +4,4 @@ rust-analyzer
 bin/zig-dir/
 bin/maelstrom/
 config/emacs
+config/fish/fish_variables
