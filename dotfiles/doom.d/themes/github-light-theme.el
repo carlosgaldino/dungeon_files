@@ -36,6 +36,8 @@
                       (github-light-green "#6fdd8b")
                       (github-light-green-d "#2da44e")
                       (github-light-yellow "#d4a72c")
+                      (github-light-yellow-l "#eac54f")
+                      (github-light-yellow-lll "#fff8c5")
                       (github-light-pink "#ffadda")
                       (github-light-blue-ll "#ddf4ff"))
 
@@ -45,10 +47,10 @@
                       (lazy-highlight (:background github-light-blue-ll))
                       (highlight (:background github-light-bg-hl))
                       (line-number (:foreground github-light-gray-ll))
-                      (lsp-face-highlight-textual (:background github-light-gray-ll))
-                      (lsp-face-highlight-read (:background github-light-gray-ll))
+                      (lsp-face-highlight-textual (:background github-light-yellow-lll))
+                      (lsp-face-highlight-read (:background github-light-yellow-lll))
                       (error (:foreground github-light-red)) ;; :background "#e3d2d2"))
-                      (region (:background github-light-bg-hl))
+                      (region (:background github-light-yellow-lll))
                       (isearch (:background github-light-blue-l))
                       (warning (:foreground github-light-coral))
                       (popup-tip-face (:background github-light-red-l :foreground github-light-fg))
@@ -65,15 +67,24 @@
                       (doom-modeline-evil-normal-state (:foreground github-light-blue))
                       (doom-modeline-warning (:foreground github-light-red :weight 'bold))
 
-                      (lsp-modeline-code-actions-face (:foreground github-light-yellow))
-
                       (evil-ex-substitute-replacement (:foreground github-light-red :underline t))
 
                       (company-tooltip (:background github-light-gray-lll :foreground github-light-fg))
                       (company-tooltip-annotation (:foreground github-light-gray-d))
-                      (company-tooltip-selection (:background github-light-gray-llll :foreground github-light-fg))
+                      (company-tooltip-selection (:background github-light-yellow-lll :foreground github-light-fg))
+                      (company-tooltip-search (:background github-light-yellow-lll :foreground github-light-fg))
+                      (company-tooltip-search-selection (:background github-light-yellow-lll :foreground github-light-fg))
+                      ;; (company-tooltip-mouse (:background github-light-yellow-lll :foreground github-light-fg))
+                      (company-tooltip-mouse (:background github-light-gray-lll :foreground github-light-fg))
                       (company-tooltip-common (:foreground github-light-gray-d))
                       (company-echo-common (:foreground github-light-gray-d))
+                      (company-tooltip-scrollbar-thumb (:background github-light-yellow))
+                      (company-tooltip-scrollbar-track (:background github-light-yellow-l))
+
+                      (header-line (:background github-light-bg :foreground github-light-fg :bold nil
+                                    :box (:line-width 1 :color github-light-gray-lll)))
+                      (mode-line-highlight (:background github-light-bg :bold nil
+                                            :box (:line-width 1 :color github-light-gray-ll)))
 
                       (mode-line (:background github-light-bg :foreground github-light-fg :bold nil
                                   :box (:line-width 1 :color github-light-gray-lll)))
