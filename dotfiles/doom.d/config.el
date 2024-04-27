@@ -111,7 +111,9 @@
               ("<tab>" . 'copilot-accept-completion)
               ("TAB" . 'copilot-accept-completion)
               ("C-TAB" . 'copilot-accept-completion-by-word)
-              ("C-<tab>" . 'copilot-accept-completion-by-word)))
+              ("C-<tab>" . 'copilot-accept-completion-by-word)
+              ("C-S-TAB" . 'copilot-accept-completion-by-line)
+              ("C-S-<tab>" . 'copilot-accept-completion-by-line)))
 
 (after! (evil copilot)
   ;; Define the custom function that either accepts the completion or does the default behavior
