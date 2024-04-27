@@ -66,6 +66,7 @@ values."
           lsp-rust-analyzer-server-display-inlay-hints t)
           ;; lsp-rust-analyzer-display-parameter-hints t)
      markdown
+     python
      ;; org
      (tree-sitter :variables
                   tree-sitter-syntax-highlight-enable t
