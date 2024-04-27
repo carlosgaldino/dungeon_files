@@ -36,5 +36,6 @@
     "com.jetbrains.CLion",
     "com.apple.ActivityMonitor",
     "com.jamfsoftware.selfservice.mac",
+    "com.runningwithcrayons.Alfred-Preferences",
   ]
 }
