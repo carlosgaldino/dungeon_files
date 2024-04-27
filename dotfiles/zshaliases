@@ -1,0 +1,52 @@
+# Dirs
+alias h="cd ~"
+alias o="open ."
+alias code="cd ~/code"
+alias dgn='cd ~/.dungeon_files'
+
+# Config
+alias reload='source ~/.bash_profile && echo "sourced ~/.bash_profile"'
+
+# Shell
+alias c='clear'
+alias la='ls -alh'
+alias cdd='cd -' # return to last directory
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias e=$EDITOR
+alias grep='grep --color=auto'
+alias diff=colordiff
+
+alias commit-image='ln -s ~/bin/post-commit-image .git/hooks/post-commit'
+
+# ls with colors
+if ls --color -d . >/dev/null 2>&1; then
+  alias ls='ls --color=auto'  # Linux
+elif ls -G -d . >/dev/null 2>&1; then
+  alias ls='ls -G'  # BSD/OS X
+fi
+
+# Git
+alias g="git-number"
+alias me="git config --local user.email carloshsgaldino@gmail.com"
+
+# bundler
+alias b="bundle"
+alias bi="b install --path vendor"
+alias bu="b update"
+alias be="b exec"
+alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
+
+alias marked="open -a Marked"
+
+alias upload-img="s3-upload -t -bucket img"
+alias upload-wiki-img="s3-upload -bucket wiki -path public/images"
+alias upload-blog-img="s3-upload -bucket blog -path public/images"
+alias publish-post="s3-upload -bucket blog index.html atom.xml"
+alias publish-draft="s3-upload -bucket blog -path drafts"
+alias publish-wiki="s3-upload -bucket wiki"
+alias publish-blog-css="s3-upload -bucket blog -path public/css"
+
+alias ag="ag --hidden"
+alias k="kubectl"

@@ -1,0 +1,52 @@
+let mapleader=","
+# set nowrap                     " don't wrap lines
+
+set easymotion
+set surround
+set highlightedyank
+
+nmap <CR> :noh<CR>
+
+set hlsearch              " highlight matches
+set incsearch             " incremental searching
+set ignorecase            " searches are case insensitive
+set smartcase             " make search case sensitive if there's a capital letter
+
+" editing -- see vimcasts#14
+cnoremap %% <C-R>=expand('%:h').'/'<CR>
+map <Leader>ew :e %%
+map <Leader>es :sp %%
+map <Leader>ev :vsp %%
+map <Leader>et :tabe %%
+
+" I always do this
+cab W w
+cab Q q
+cab Qa qa
+cab Wq wq
+cab Wa wa
+cab WQ wq
+cab X x
+
+" move by screen lines
+noremap <Up> gk
+noremap <Down> gj
+noremap k gk
+noremap j gj
+
+" window cycling
+nmap <c-j> <c-w>j
+nmap <c-k> <c-w>k
+nmap <c-h> <c-w>h
+nmap <c-l> <c-w>l
+
+nmap gqq :action com.andrewbrookins.idea.wrap.WrapAction<CR><Esc>
+vmap gq :action com.andrewbrookins.idea.wrap.WrapAction<CR><Esc>
+
+" Text objects
+set argtextobj
+" Teach it about all the different places arguments live
+let g:argtextobj_pairs = "(:),{:},<:>,[:]"
+
+" reselect pasted text
+nnoremap gp `[v`]

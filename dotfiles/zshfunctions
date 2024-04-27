@@ -1,0 +1,12 @@
+function set_win_title(){
+    echo -ne "\033]0; $(basename $PWD) \007"
+}
+
+# Create a directory and cd to it
+#
+# Example:
+#
+#   mkcd new-dir
+function mkcd() {
+ mkdir -p $1 && cd $1
+}
