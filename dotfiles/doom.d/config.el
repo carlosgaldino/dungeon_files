@@ -148,3 +148,7 @@
 ;; (setq global-so-long-mode nil)
 (after! so-long
   (setq-default so-long-threshold 10000))
+
+(setq-default blink-cursor-mode 0)
+(blink-cursor-mode t)
+(setq-default blink-cursor-blinks 0)
