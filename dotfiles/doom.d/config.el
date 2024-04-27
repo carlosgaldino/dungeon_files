@@ -14,6 +14,7 @@
 ;; This is only enabled for modes listed in
 ;; `doom-modeline-continuous-word-count-modes'
 (setq doom-modeline-enable-word-count t)
+(setq deft-directory "~/notes")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -159,6 +160,8 @@
 
 (after! beancount
   (setq-default lsp-beancount-langserver-executable "beancount-language-server"))
+(after! deft
+  (setq deft-default-extension "md"))
 (after! flycheck
   ;; Disable highlighting errors in the buffer.
   (setq flycheck-highlighting-mode nil))
