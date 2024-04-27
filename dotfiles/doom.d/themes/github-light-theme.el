@@ -28,11 +28,15 @@
                       (github-light-keyword-constant "#0550ae")
                       ;; (github-light-red "#f85149")
                       (github-light-red "#fa4549")
+                      (github-light-red-l "#ff8182")
+                      (github-light-red-ll "#ffaba8")
                       (github-light-blue-d "#0a3069")
                       (github-light-blue "#0550ae")
                       (github-light-blue-l "#80ccff")
                       (github-light-green "#6fdd8b")
-                      (github-light-red-ll "#ffaba8")
+                      (github-light-green-d "#2da44e")
+                      (github-light-yellow "#d4a72c")
+                      (github-light-pink "#ffadda")
                       (github-light-blue-ll "#ddf4ff"))
 
                      (
@@ -47,6 +51,14 @@
                       (region (:background github-light-bg-hl))
                       (isearch (:background github-light-blue-l))
                       (warning (:foreground github-light-coral))
+                      (popup-tip-face (:background github-light-red-l :foreground github-light-fg))
+
+                      (doom-modeline-info (:foreground github-light-green-d))
+                      (doom-modeline-buffer-file (:foreground github-light-blue))
+                      (doom-modeline-buffer-major-mode (:foreground github-light-blue-d))
+                      (doom-modeline-panel (:background github-light-blue-l :box nil :bold nil))
+
+                      (lsp-modeline-code-actions-face (:foreground github-light-yellow))
 
                       (evil-ex-substitute-replacement (:foreground github-light-red :underline t))
 
@@ -63,12 +75,14 @@
                                         ; (mode-line-inactive  (:background github-light-bg :foreground github-light-fg :bold nil
                       ;;                       :box (:line-width 2 :color github-light-bg-hl)))
                       ;; (mode-line-buffer-id (:background 'unspecified :foreground github-light-fg :bold nil))
-                      ;; (mode-line-highlight (:foreground github-light-bg-hl :box nil :bold nil))
+                      ;; (mode-line-highlight (:background github-light-blue-l :box nil :bold nil))
                       ;; (mode-line-emphasis  (:foreground github-light-bg-hl))
                       ;;
                       (git-gutter:added (:foreground github-light-green :weight 'bold))
                       (git-gutter:deleted (:foreground github-light-red :weight 'bold))
                       (git-gutter:modified (:foreground github-light-red-ll :weight 'bold))
+
+                      (minibuffer-prompt  (:inherit 'font-lock-builtin-face))
 
                       (magit-branch-remote (:inherit 'font-lock-keyword-face))
                       (magit-branch-local (:inherit 'font-lock-builtin-face))
