@@ -2,12 +2,15 @@
   "layouts": [
     "floating",
     "fullscreen",
+    "3column-left",
+    "two-pane",
+    "3column-middle",
+    "bsp",
     "tall",
     "wide",
     "column",
     "row",
     "widescreen-tall",
-    "3column-left",
   ],
   "floating": [
     "com.apple.Dictionary",
