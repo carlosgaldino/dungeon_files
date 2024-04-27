@@ -40,7 +40,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'kaolin-mono-dark)
+(setq doom-theme 'github-dark)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -91,8 +91,8 @@
 (use-package! auto-dark
   :config
   (auto-dark-mode t)
-  (setq auto-dark-dark-theme 'kaolin-mono-dark)
-  (setq auto-dark-light-theme 'kaolin-mono-light))
+  (setq auto-dark-dark-theme 'github-dark)
+  (setq auto-dark-light-theme 'github-light))
 (use-package! company-box
   :hook (company-mode . company-box-mode))
 ;; ;; accept completion from copilot and fallback to company
