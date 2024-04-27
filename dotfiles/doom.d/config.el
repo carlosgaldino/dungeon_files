@@ -210,6 +210,8 @@
       (add-to-list 'global-mode-string '(" "))
     (setq global-mode-string ())))
 (add-hook 'copilot-mode-hook #'copilot-mode-line)
+(add-hook 'html-mode-hook '(lambda () (setq-local apheleia-inhibit t)))
+(add-hook 'web-mode-hook '(lambda () (setq-local apheleia-inhibit t)))
 
 ;; (use-package! zone)
 ;; (zone-when-idle 300)
