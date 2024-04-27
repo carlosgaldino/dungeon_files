@@ -53,6 +53,7 @@
                       (warning (:foreground github-light-coral))
                       (popup-tip-face (:background github-light-red-l :foreground github-light-fg))
                       (git-commit-summary (:foreground github-light-blue))
+                      (git-commit-pseudo-header (:foreground github-light-blue))
 
                       (doom-modeline-info (:foreground github-light-green-d))
                       (doom-modeline-buffer-file (:foreground github-light-blue))
