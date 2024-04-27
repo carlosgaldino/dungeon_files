@@ -121,6 +121,8 @@
 (after! lsp
   (setq lsp-headerline-breadcrumb-enable t)
   (setq lsp-headerline-breadcrumb-enable-diagnostics nil))
+(after! rustic
+  (setq rustic-cargo-check-arguments "--all-targets"))
 (map! :n "RET" #'evil-ex-nohighlight)
 (map! :desc "Open documentation for symbol"
       :map rust-mode-map
