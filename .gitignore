@@ -5,3 +5,4 @@ bin/zig-dir/
 bin/maelstrom/
 config/emacs
 config/fish/fish_variables
+config/iterm2
