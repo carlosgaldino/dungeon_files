@@ -80,3 +80,6 @@ au FileType clojure nnoremap <leader>E :%Eval<CR>
 " add strike-through to a word
 au FileType markdown nmap <leader>st ysiw~
 au FileType markdown nmap <leader>St ysiW~
+
+" reselect pasted text
+nnoremap gp `[v`]

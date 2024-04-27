@@ -70,3 +70,6 @@ autocmd BufRead,BufNewFile *.md setlocal spell
 autocmd FileType gitcommit setlocal spell
 
 runtime macros/matchit.vim
+
+" copy to system's clipboard
+set clipboard=unnamed
