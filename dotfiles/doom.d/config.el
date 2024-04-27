@@ -112,6 +112,17 @@
   (tree-sitter-syntax-highlight-enable t)
   (tree-sitter-fold-enable t)
   (tree-sitter-fold-indicators-enable t))
+(use-package! zig-mode
+  :hook ((zig-mode . lsp-deferred))
+  :custom (zig-format-on-save nil)
+  :config
+  (after! lsp-mode
+    (add-to-list 'lsp-language-id-configuration '(zig-mode . "zig"))
+    (lsp-register-client
+      (make-lsp-client
+        :new-connection (lsp-stdio-connection "zls --config-path $HOME/zls.json")
+        :major-modes '(zig-mode)
+        :server-id 'zls))))
 
 (after! flycheck
   ;; Disable highlighting errors in the buffer.

@@ -179,7 +179,9 @@
        ;;web               ; the tubes
        (yaml               ; JSON, but readable
         +tree-sitter)
-       ;;zig               ; C, but simpler
+       (zig
+        +lsp
+        +tree-sitter)      ; C, but simpler
 
        :email
        ;;(mu4e +org +gmail)
