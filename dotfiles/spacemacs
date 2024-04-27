@@ -392,6 +392,10 @@ you should place your code here."
   (add-hook 'rust-mode-hook 'lsp)
 
   (setq org-agenda-files (directory-files-recursively "~/.org/" "\\.org$"))
+  ;; Temp bugfix for: https://github.com/magit/magit/issues/4739
+  (defun dcl/disable-truncate-lines-in-magit-status ()
+    (setq-local truncate-lines nil))
+  (add-hook 'magit-status-mode-hook 'dcl/disable-truncate-lines-in-magit-status)
 
   ;; (setq markdown-command "pandoc --toc --toc-depth=4 -s -f markdown+smart -t html -c http://blog.carlosgaldino.com/public/css/main.css -c http://blog.carlosgaldino.com/public/css/syntax.css")
   (setq markdown-command "pandoc --template=GitHub.html5")
