@@ -75,7 +75,10 @@ values."
           '(("TODO" . org-warning) ("IN-PROGRESS" . "yellow")
             ("DONE" . org-done) ("CANCELLED" . (:strike-through t)))
           org-fontify-done-headline t)
-     python
+     (python :variables
+             python-backend 'lsp
+             python-lsp-server 'pyright)
+     ;; org
      (tree-sitter :variables
                   tree-sitter-syntax-highlight-enable t
                   tree-sitter-fold-enable t
