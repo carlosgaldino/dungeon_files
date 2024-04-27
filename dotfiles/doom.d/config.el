@@ -167,6 +167,9 @@
 
 (after! beancount
   (setq-default lsp-beancount-langserver-executable "beancount-language-server"))
+(after! ccls
+  (setq ccls-initialization-options '(:index (:comments 2) :completion (:detailedLabel t)))
+  (set-lsp-priority! 'ccls 2)) ; optional as ccls is the default in Doom
 (after! deft
   (setq deft-default-extension "md"))
 (after! go-mode
