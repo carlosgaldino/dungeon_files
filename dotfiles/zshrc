@@ -43,10 +43,16 @@ source ~/.zshaliases
 
 # autocompletion
 # zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
-fpath=(~/.zsh $fpath)
-autoload -Uz compinit && compinit
-# autoload -Uz ~/.zsh/*(:t)
-unsetopt completealiases
+# fpath=(~/.zsh $fpath)
+# autoload -Uz compinit && compinit
+# # autoload -Uz ~/.zsh/*(:t)
+# unsetopt completealiases
+if type brew &>/dev/null; then
+   FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+   autoload -Uz compinit
+   compinit
+fi
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
@@ -58,9 +64,9 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
 
-test -e $(which chruby-exec) \
-  && source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh \
-  && source $(brew --prefix)/opt/chruby/share/chruby/auto.sh \
-  && chruby ruby-3.1.3
+# test -e $(which chruby-exec) \
+#   && source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh \
+#   && source $(brew --prefix)/opt/chruby/share/chruby/auto.sh \
+#   && chruby ruby-3.1.3
 
 # vim: set ft=sh :
