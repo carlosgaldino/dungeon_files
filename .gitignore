@@ -3,3 +3,4 @@ vim/bundle/elixir
 rust-analyzer
 bin/zig-dir/
 bin/maelstrom/
+config/emacs
