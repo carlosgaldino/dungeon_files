@@ -130,6 +130,8 @@
 (after! flycheck
   ;; Disable highlighting errors in the buffer.
   (setq flycheck-highlighting-mode nil))
+(after! javascript
+  (setq lsp-clients-typescript-npm-location "bun"))
 (after! kaolin-themes
   (kaolin-treemacs-theme))
 (after! lsp

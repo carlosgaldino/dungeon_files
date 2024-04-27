@@ -12,6 +12,7 @@
 (package! kaolin-themes)
 (package! magit-delta)
 (package! protobuf-mode)
+(package! svelte-mode)
 (package! zig-mode)
 
 ;; To install a package directly from a remote git repo, you must specify a
