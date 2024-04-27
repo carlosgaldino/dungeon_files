@@ -56,31 +56,6 @@
 [push]
 	default = simple
 
-#
-#   [alias]
-#   lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-#   lgs = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --first-parent --no-merges --author="Pato"
-#   graph = log --graph -10 --branches --remotes --tags  --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %cr) %Cred%d' --date-order
-#   branches = branch -a
-#   co = checkout
-#   tags = tag
-#   last = diff HEAD~1 HEAD
-#   head = diff HEAD
-#   staged = diff --cached
-#   stashes = "!git --no-pager stash list"
-#   stashview = "!f() { git stash show -p "stash@{$1}"; }; f"
-#   stashpply = "!f() { git stash apply "stash@{$1}"; }; f"
-#   stashpop = "!f() { git stash pop "stash@{$1}"; }; f"
-#   stashrm = "!f() { git stash drop "stash@{$1}"; }; f"
-#   unstage = reset -q HEAD --
-#   discard = checkout --
-#   uncommit = reset --mixed HEAD~
-#   amend = commit --amend
-#   nevermind = !git reset --hard HEAD && git clean -d -f
-#   precommit = diff --cached --diff-algorithm=minimal -w
-#   ignore = update-index --assume-unchanged
-#   unignore = update-index --no-assume-unchanged
-# [core]
 [init]
 	defaultBranch = main
 [pull]
