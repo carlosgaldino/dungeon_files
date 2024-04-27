@@ -50,6 +50,7 @@
                       (lsp-face-highlight-textual (:background github-dark-yellow-l))
                       (lsp-face-highlight-read (:background github-dark-yellow-l))
                       (lsp-headerline-breadcrumb-symbols-face (:foreground github-dark-fg :weight 'bold))
+                      (lsp-treemacs-file-warn (:foreground github-dark-yellow))
                       (error (:foreground github-dark-red)) ;; :background "#e3d2d2"))
                       (region (:background github-dark-yellow-lll))
                       (isearch (:background github-dark-blue-l))
