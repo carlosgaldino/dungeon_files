@@ -19,6 +19,7 @@
                       (github-light-gray-l "#afb8c1")
                       (github-light-gray-ll "#d0d7de")
                       (github-light-gray-lll "#eaeef2")
+                      (github-light-gray-llll "#f6f8fa")
                       (github-light-gray-d "#6e7781")
                       (github-light-orange "#bc4c00")
                       (github-light-coral "#ec6547")
@@ -48,6 +49,12 @@
                       (warning (:foreground github-light-coral))
 
                       (evil-ex-substitute-replacement (:foreground github-light-red :underline t))
+
+                      (company-tooltip (:background github-light-gray-lll :foreground github-light-fg))
+                      (company-tooltip-annotation (:foreground github-light-gray-d))
+                      (company-tooltip-selection (:background github-light-gray-llll :foreground github-light-fg))
+                      (company-tooltip-common (:foreground github-light-gray-d))
+                      (company-echo-common (:foreground github-light-gray-d))
 
                       (mode-line (:background github-light-bg :foreground github-light-fg :bold nil
                                   :box (:line-width 1 :color github-light-gray-lll)))
