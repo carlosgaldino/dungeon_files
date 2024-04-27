@@ -47,6 +47,8 @@
                       (github-dark-blue-ll "#0d419d"))
 
                      (
+                      (link (:foreground github-dark-blue :underline t))
+                      (homoglyph (:foreground github-dark-yellow))
                       (cursor (:background github-dark-fg))
                       (default (:foreground github-dark-fg :background github-dark-bg))
                       (lazy-highlight (:background github-dark-blue-ll))
