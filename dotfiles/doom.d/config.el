@@ -84,6 +84,7 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+(remove-hook 'doom-first-input-hook #'evil-snipe-mode)
 (add-hook 'markdown-mode-hook 'turn-on-auto-fill)
 
 (use-package! auto-dark
