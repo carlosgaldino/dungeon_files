@@ -169,6 +169,9 @@
   (setq-default lsp-beancount-langserver-executable "beancount-language-server"))
 (after! deft
   (setq deft-default-extension "md"))
+(after! go-mode
+  (setq-default gofmt-command "goimports")
+  (add-hook 'before-save-hook 'gofmt-before-save))
 (after! flycheck
   ;; Disable highlighting errors in the buffer.
   (setq flycheck-highlighting-mode nil))
