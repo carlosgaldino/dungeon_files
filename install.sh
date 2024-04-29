@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -euo pipefail
+
 remove_file() {
   echo "Removing $1"
   rm $1
