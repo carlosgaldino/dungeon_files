@@ -44,3 +44,5 @@ relink_file $HOME/.dungeon_files/config/fish/config.fish $HOME/.config/fish/conf
 relink_file $HOME/.dungeon_files/config/ghostty/config $HOME/.config/ghostty/config
 
 brew bundle --file=Brewfile
+
+fisher install 2m/fish-history-merge
