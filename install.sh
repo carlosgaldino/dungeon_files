@@ -42,3 +42,5 @@ fi
 
 relink_file $HOME/.dungeon_files/config/fish/config.fish $HOME/.config/fish/config.fish
 relink_file $HOME/.dungeon_files/config/ghostty/config $HOME/.config/ghostty/config
+
+brew bundle --file=Brewfile
