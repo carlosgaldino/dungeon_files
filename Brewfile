@@ -33,6 +33,7 @@ brew "d12frosted/emacs-plus/emacs-plus", args: ["with-imagemagick", "with-modern
 cask "amethyst"
 cask "iterm2"
 cask "linear-linear"
+cask "macfuse"
 cask "monodraw"
 cask "notion"
 cask "obsidian"
