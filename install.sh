@@ -26,19 +26,17 @@ do
   relink_file $file $home_file
 done
 
-rm -rf $HOME/.config
-ln -s $HOME/.dungeon_files/config $HOME/.config
+rm -rf $HOME/.config/fish
+rm -rf $HOME/.config/ghostty
 
 if [ -e $HOME/bin ]; then
-  remove_file $HOME/bin
+  rm -rf $HOME/bin
 fi
 
 link_files $HOME/.dungeon_files/bin $HOME/bin
 
-if [ -d $HOME/.config ]; then
-  mkdir -p $HOME/.config/fish
-  mkdir -p $HOME/.config/ghostty
-fi
+mkdir -p $HOME/.config/fish
+mkdir -p $HOME/.config/ghostty
 
 relink_file $HOME/.dungeon_files/config/fish/config.fish $HOME/.config/fish/config.fish
 relink_file $HOME/.dungeon_files/config/ghostty/config $HOME/.config/ghostty/config
