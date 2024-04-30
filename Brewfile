@@ -1,11 +1,13 @@
 tap "d12frosted/emacs-plus"
 
 brew "awscli"
+brew "bash-language-server"
 brew "btop"
 brew "curl"
 brew "ffmpeg"
 brew "fish"
 brew "gcc"
+brew "gh"
 brew "git"
 brew "git-delta"
 brew "go"
@@ -15,10 +17,13 @@ brew "jless"
 brew "jq"
 brew "libgccjit"
 brew "make"
+brew "mas"
 brew "openssl"
 brew "pandoc"
 brew "ripgrep"
 brew "starship"
+brew "terraform"
+brew "terraform-ls"
 brew "tree"
 brew "vim"
 
@@ -33,6 +38,9 @@ cask "obsidian"
 cask "slack"
 cask "spotify"
 cask "ticktick"
+cask "visual-studio-code"
 cask "zoom"
+
+mas "amphetamine", id: 937984704
 
 # vim: set ft=ruby :
