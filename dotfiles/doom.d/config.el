@@ -95,6 +95,9 @@
   (auto-dark-mode t)
   (setq auto-dark-dark-theme 'github-dark)
   (setq auto-dark-light-theme 'github-light))
+(use-package! codespaces
+  :ensure-system-package gh
+  :config (codespaces-setup))
 (use-package! company-box
   :hook (company-mode . company-box-mode))
 ;; accept completion from copilot and fallback to company
@@ -195,6 +198,12 @@
 ;; (setq global-so-long-mode nil)
 (after! so-long
   (setq-default so-long-threshold 10000))
+
+(after! vc
+  (setq-default vc-handled-backends '(Git)))
+(after! tramp
+  (add-to-list 'tramp-remote-path 'tramp-own-remote-path)
+  (setq-default tramp-ssh-controlmaster-options ""))
 
 (setq-default blink-cursor-mode 0)
 (blink-cursor-mode t)
