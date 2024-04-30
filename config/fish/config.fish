@@ -14,6 +14,7 @@ if status is-interactive
     fish_add_path -m /opt/homebrew/opt/llvm/bin
     fish_add_path $BUN_INSTALL/bin
     fish_add_path $GOPATH/bin
+    fish_add_path $HOME/.cargo/bin
 
     alias g=git
     alias reload="source ~/.config/fish/config.fish"
