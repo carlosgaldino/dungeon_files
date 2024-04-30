@@ -5,6 +5,7 @@ if status is-interactive
     set -gx LDFLAGS "-L/opt/homebrew/opt/llvm/lib/c++ -Wl,-rpath,/opt/homebrew/opt/llvm/lib/c++"
     set -gx CPPFLAGS "-I/opt/homebrew/opt/llvm/include"
     set -gx BUN_INSTALL "$HOME/.bun"
+    set -gx GOPATH "$HOME/code/golang"
 
     fish_add_path -m /opt/homebrew/bin
     fish_add_path -m $HOME/.config/emacs/bin
@@ -12,6 +13,7 @@ if status is-interactive
     fish_add_path /opt/homebrew/opt/ruby/bin
     fish_add_path -m /opt/homebrew/opt/llvm/bin
     fish_add_path $BUN_INSTALL/bin
+    fish_add_path $GOPATH/bin
 
     alias g=git
     alias reload="source ~/.config/fish/config.fish"
