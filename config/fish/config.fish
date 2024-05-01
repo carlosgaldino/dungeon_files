@@ -6,6 +6,7 @@ if status is-interactive
     set -gx CPPFLAGS "-I/opt/homebrew/opt/llvm/include"
     set -gx BUN_INSTALL "$HOME/.bun"
     set -gx GOPATH "$HOME/code/golang"
+    set -gx HOMEBREW_NO_AUTO_UPDATE 1
 
     fish_add_path -m /opt/homebrew/bin
     fish_add_path -m $HOME/.config/emacs/bin
