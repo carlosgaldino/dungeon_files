@@ -31,6 +31,7 @@ brew "vim"
 brew "d12frosted/emacs-plus/emacs-plus", args: ["with-imagemagick", "with-modern-doom-icon", "with-native-comp", "with-poll"]
 
 cask "amethyst"
+cask "elgato-control-center"
 cask "iterm2"
 cask "linear-linear"
 cask "macfuse"
