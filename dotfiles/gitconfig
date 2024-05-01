@@ -58,3 +58,6 @@
 	defaultBranch = main
 [pull]
 	ff = only
+
+[includeIf "gitdir:~/code/**/work/**"]
+    path = ~/code/work/.gitconfig
