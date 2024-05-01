@@ -25,6 +25,7 @@ brew "ripgrep"
 brew "starship"
 brew "terraform"
 brew "terraform-ls"
+brew "typescript-language-server"
 brew "tree"
 brew "vim"
 
