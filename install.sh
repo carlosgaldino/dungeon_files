@@ -26,8 +26,8 @@ do
   relink_file $file $home_file
 done
 
-rm -rf $HOME/.config/fish
-rm -rf $HOME/.config/ghostty
+rm -rf $HOME/.config/fish/config.fish
+rm -rf $HOME/.config/ghostty/config
 
 if [ -e $HOME/bin ]; then
   rm -rf $HOME/bin
