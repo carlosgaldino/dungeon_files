@@ -1,5 +1,4 @@
 vim/bundle/elixir
 .netrwhist
 rust-analyzer
-bin/zig-dir/
-bin/maelstrom/
+bin/installed

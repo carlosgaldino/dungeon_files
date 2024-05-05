@@ -10,6 +10,7 @@ if status is-interactive
 
     fish_add_path -m /opt/homebrew/bin
     fish_add_path -m $HOME/.config/emacs/bin
+    fish_add_path -m $HOME/bin/installed
     fish_add_path -m $HOME/bin
     fish_add_path /opt/homebrew/opt/ruby/bin
     fish_add_path -m /opt/homebrew/opt/llvm/bin
