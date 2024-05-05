@@ -1,4 +1,5 @@
 tap "d12frosted/emacs-plus"
+tap "oven-sh/bun"
 
 brew "awscli"
 brew "bash-language-server"
@@ -19,6 +20,7 @@ brew "jq"
 brew "libgccjit"
 brew "make"
 brew "mas"
+brew "node"
 brew "openssl"
 brew "pandoc"
 brew "ripgrep"
@@ -30,6 +32,7 @@ brew "tree"
 brew "vim"
 
 brew "d12frosted/emacs-plus/emacs-plus", args: ["with-imagemagick", "with-modern-doom-icon", "with-native-comp", "with-poll"]
+brew "oven-sh/bun/bun"
 
 cask "amethyst"
 cask "elgato-control-center"
