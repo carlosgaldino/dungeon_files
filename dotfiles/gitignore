@@ -28,3 +28,6 @@ target/
 
 sandbox
 .ccls-cache
+
+zig-out/
+zig-cache/
