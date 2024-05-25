@@ -61,3 +61,5 @@
 
 [includeIf "gitdir:~/code/**/work/**"]
     path = ~/code/work/.gitconfig
+[rerere]
+	enabled = true
