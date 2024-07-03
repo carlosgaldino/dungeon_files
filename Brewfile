@@ -62,5 +62,6 @@ cask "visual-studio-code"
 cask "zoom"
 
 mas "amphetamine", id: 937984704
+mas "xcode", id: 497799835
 
 # vim: set ft=ruby :
