@@ -24,7 +24,7 @@ end
 
 starship init fish | source
 
-source "$HOME/.cargo/env.fish"
+# source "$HOME/.cargo/env.fish"
 # pnpm
 set -gx PNPM_HOME "$HOME/Library/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
