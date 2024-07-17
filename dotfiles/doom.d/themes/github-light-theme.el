@@ -110,6 +110,18 @@
                       (git-gutter:added (:foreground github-light-green :weight 'bold))
                       (git-gutter:deleted (:foreground github-light-red :weight 'bold))
                       (git-gutter:modified (:foreground github-light-yellow :weight 'bold))
+                      (diff-hl-insert (:foreground github-light-green :weight 'bold))
+                      (diff-hl-delete (:foreground github-light-red :weight 'bold))
+                      (diff-hl-change (:foreground github-light-yellow :weight 'bold))
+
+                      ;; ;; git-gutter+
+                      ;; (git-gutter+-modified :foreground 'git-gutter:modified :background 'git-gutter:modified)
+                      ;; (git-gutter+-added    :foreground 'git-gutter:added    :background 'git-gutter:added)
+                      ;; (git-gutter+-deleted  :foreground 'git-gutter:deleted  :background 'git-gutter:deleted)
+                      ;; ;; ;; git-gutter-fringe
+                      ;; (git-gutter-fr:modified :background 'git-gutter:modified)
+                      ;; (git-gutter-fr:added    :inherit 'git-gutter:added)
+                      ;; (git-gutter-fr:deleted  :inherit 'git-gutter:deleted)
 
                       (git-timemachine-minibuffer-author-face (:inherit 'magit-log-author))
                       (git-timemachine-minibuffer-detail-face (:inherit 'default))

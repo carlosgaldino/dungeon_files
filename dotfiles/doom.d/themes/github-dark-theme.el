@@ -109,6 +109,9 @@
                       (git-gutter:added (:foreground github-dark-green :weight 'bold))
                       (git-gutter:deleted (:foreground github-dark-red :weight 'bold))
                       (git-gutter:modified (:foreground github-dark-yellow :weight 'bold))
+                      (diff-hl-insert (:foreground github-dark-green :weight 'bold))
+                      (diff-hl-delete (:foreground github-dark-red :weight 'bold))
+                      (diff-hl-change (:foreground github-dark-yellow :weight 'bold))
 
                       (git-timemachine-minibuffer-author-face (:inherit 'magit-log-author))
                       (git-timemachine-minibuffer-detail-face (:inherit 'default))
