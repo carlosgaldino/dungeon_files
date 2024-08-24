@@ -170,6 +170,9 @@
   (set-lsp-priority! 'ccls 2)) ; optional as ccls is the default in Doom
 (after! deft
   (setq deft-default-extension "md"))
+(after! disaster
+  (setq disaster-cc "clang")
+  (setq disaster-cflags "-Wall -std=c23"))
 (after! go-mode
   (setq-default gofmt-command "goimports")
   (add-hook 'before-save-hook 'gofmt-before-save))
