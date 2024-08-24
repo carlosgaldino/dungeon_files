@@ -45,6 +45,7 @@ brew "d12frosted/emacs-plus/emacs-plus", args: ["with-imagemagick", "with-modern
 brew "oven-sh/bun/bun"
 
 cask "amethyst"
+cask "clion"
 cask "drawio"
 cask "elgato-control-center"
 cask "google-chrome"
