@@ -7,7 +7,7 @@
 (unless (>= emacs-major-version 24)
   (error "Requires Emacs 24 or later"))
 
-(autothemer-deftheme github-dark "A light theme inspired by GitHub's color scheme"
+(autothemer-deftheme github-dark "A dark theme inspired by GitHub's color scheme"
                      ((((class color) (min-colors #xFFFFFF)))
 
                       (github-dark-bg "#010409")
@@ -126,6 +126,8 @@
                       (magit-hash (:inherit 'font-lock-comment-face))
                       (magit-refname (:inherit 'font-lock-comment-face))
                       (magit-tag (:inherit 'warning))
+                      (magit-diff-added (:foreground github-dark-green :weight 'bold))
+                      (magit-diff-added-highlight (:foreground github-dark-green :weight 'bold))
                       (magit-diff-hunk-heading-highlight (:background github-dark-gray-lll))
                       (magit-diff-hunk-heading (:background github-dark-gray-lll))
                       (magit-log-author (:inherit 'font-lock-number-face))
