@@ -113,13 +113,15 @@
        ;;upload            ; map local to remote projects via ssh/ftp
 
        :os
-       (:if IS-MAC macos)  ; improve compatibility with macOS
+       (:if (featurep :system 'macos) macos) ; improve compatibility with macOS
        ;;tty               ; improve the terminal Emacs experience
 
        :lang
        ;;agda              ; types of types of types of types...
        (beancount +lsp)    ; mind the GAAP
-       (cc +lsp)           ; C > C++ == 1
+       (cc                 ; C > C++ == 1
+        +lsp
+        +tree-sitter)
        ;;clojure           ; java with a lisp
        ;;common-lisp       ; if you've seen one lisp, you've seen them all
        ;;coq               ; proofs-as-programs
@@ -177,12 +179,17 @@
         +tree-sitter)      ; Fe2O3.unwrap().unwrap().unwrap().unwrap()
        ;;scala             ; java, but good
        ;;(scheme +guile)   ; a fully conniving family of lisps
-       (sh +lsp)           ; she sells {ba,z,fi}sh shells on the C xor
+       (sh                 ; she sells {ba,z,fi}sh shells on the C xor
+        +fish
+        +lsp
+        +tree-sitter)
        ;;sml
        ;;solidity          ; do you need a blockchain? No.
        ;;swift             ; who asked for emoji variables?
        ;;terra             ; Earth and Moon in alignment for performance.
-       web                 ; the tubes
+       (web                ; the tubes
+        +lsp
+        +tree-sitter)
        (yaml               ; JSON, but readable
         +tree-sitter)
        (zig
