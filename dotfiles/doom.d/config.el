@@ -98,8 +98,8 @@
 (use-package! codespaces
   :ensure-system-package gh
   :config (codespaces-setup))
-(use-package! company-box
-  :hook (company-mode . company-box-mode))
+;; (use-package! company-box
+;;   :hook (company-mode . company-box-mode))
 ;; accept completion from copilot and fallback to company
 ;; (use-package! copilot
 ;;   ;; :hook (prog-mode . copilot-mode)
