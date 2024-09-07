@@ -137,7 +137,7 @@
   (lsp-signature-doc-lines 1)
   (lsp-signature-render-documentation nil)
   (lsp-rust-analyzer-cargo-watch-command "clippy")
-  (lsp-rust-analyzer-server-display-inlay-hints t)
+  ;; (lsp-rust-analyzer-server-display-inlay-hints t)
   (cargo-process-reload-on-modify t))
 (use-package! lsp-ui
   :custom
@@ -185,8 +185,8 @@
   (kaolin-treemacs-theme))
 (after! lsp
   (setq lsp-headerline-breadcrumb-enable t)
-  (setq lsp-headerline-breadcrumb-enable-diagnostics nil)
-  (setq lsp-inlay-hint-enable t))
+  (setq lsp-headerline-breadcrumb-enable-diagnostics nil))
+;; (setq lsp-inlay-hint-enable t))
 (after! rustic
   (setq rustic-cargo-check-arguments "--workspace --all-targets")
   (setq rustic-default-clippy-arguments "--workspace --all-targets")
