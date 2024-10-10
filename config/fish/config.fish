@@ -14,6 +14,9 @@ if status is-interactive
     fish_add_path -m $HOME/bin
     fish_add_path /opt/homebrew/opt/ruby/bin
     fish_add_path -m /opt/homebrew/opt/llvm@16/bin
+    fish_add_path -m /opt/homebrew/opt/llvm/bin
+    fish_add_path /opt/homebrew/opt/curl/bin
+    fish_add_path /opt/homebrew/opt/rustup/bin
     fish_add_path $BUN_INSTALL/bin
     fish_add_path $GOPATH/bin
     fish_add_path $HOME/.cargo/bin
