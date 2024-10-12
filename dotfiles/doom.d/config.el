@@ -90,11 +90,11 @@
 (remove-hook 'doom-first-input-hook #'evil-snipe-mode)
 (add-hook 'markdown-mode-hook 'turn-on-auto-fill)
 
-(use-package! auto-dark
-  :config
-  (auto-dark-mode t)
-  (setq auto-dark-dark-theme 'github-dark)
-  (setq auto-dark-light-theme 'github-light))
+;; (use-package! auto-dark
+;;   :config
+;;   (auto-dark-mode t)
+;;   (setq auto-dark-dark-theme 'github-dark)
+;;   (setq auto-dark-light-theme 'github-light))
 (use-package! codespaces
   :ensure-system-package gh
   :config (codespaces-setup))
