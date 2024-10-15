@@ -9,6 +9,7 @@
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;; (package! some-package)
 ;; (package! auto-dark)
+(package! all-the-icons)
 (package! codespaces)
 (package! kaolin-themes)
 (package! literate-calc-mode)
