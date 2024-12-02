@@ -68,5 +68,6 @@ cask "zoom"
 
 mas "amphetamine", id: 937984704
 mas "xcode", id: 497799835
+mas "okta-extension-app", id: 1439967473
 
 # vim: set ft=ruby :
