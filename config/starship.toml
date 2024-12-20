@@ -10,8 +10,11 @@ discharging_symbol = "💀 "
 threshold = 30
 style = "bold red"
 
+[aws]
+symbol = '☁️ '
+
 [git_branch]
-symbol = "🌱 "
+# symbol = "🌱 "
 truncation_symbol = ""
 
 [git_commit]

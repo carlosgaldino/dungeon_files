@@ -28,6 +28,7 @@ done
 
 rm -rf $HOME/.config/fish/config.fish
 rm -rf $HOME/.config/ghostty/config
+rm -rf $HOME/.config/starship.toml
 
 if [ -e $HOME/bin ]; then
   rm -rf $HOME/bin
@@ -40,6 +41,7 @@ mkdir -p $HOME/.config/ghostty
 
 relink_file $HOME/.dungeon_files/config/fish/config.fish $HOME/.config/fish/config.fish
 relink_file $HOME/.dungeon_files/config/ghostty/config $HOME/.config/ghostty/config
+relink_file $HOME/.dungeon_files/config/starship.toml $HOME/.config/starship.toml
 
 brew bundle --file=Brewfile
 
