@@ -24,6 +24,7 @@ if status is-interactive
 
     abbr -a g git
     abbr -a k kubectl
+    abbr -a la ls -la
     alias reload="source ~/.config/fish/config.fish"
 end
 
