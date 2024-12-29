@@ -4,4 +4,5 @@ theme                         = Snazzy
 macos-option-as-alt           = left
 copy-on-select                = clipboard
 quit-after-last-window-closed = true
+auto-update-channel           = stable
 keybind                       = global:cmd+'=toggle_quick_terminal
