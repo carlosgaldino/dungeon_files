@@ -27,6 +27,7 @@ do
 done
 
 rm -rf $HOME/.config/fish/config.fish
+rm -rf $HOME/.config/fish/functions
 rm -rf $HOME/.config/ghostty/config
 rm -rf $HOME/.config/starship.toml
 
@@ -40,6 +41,7 @@ mkdir -p $HOME/.config/fish
 mkdir -p $HOME/.config/ghostty
 
 relink_file $HOME/.dungeon_files/config/fish/config.fish $HOME/.config/fish/config.fish
+relink_file $HOME/.dungeon_files/config/fish/functions $HOME/.config/fish/functions
 relink_file $HOME/.dungeon_files/config/ghostty/config $HOME/.config/ghostty/config
 relink_file $HOME/.dungeon_files/config/starship.toml $HOME/.config/starship.toml
 
