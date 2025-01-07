@@ -1,3 +1,5 @@
+background-opacity            = 0.95
+background-blur-radius        = 20
 font-family                   = "MonoLisa"
 font-size                     = 14
 theme                         = Snazzy
