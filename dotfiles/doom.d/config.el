@@ -15,6 +15,7 @@
 ;; `doom-modeline-continuous-word-count-modes'
 (setq doom-modeline-enable-word-count t)
 (setq deft-directory "~/notes")
+(setq xref-search-program 'ripgrep)
 
 (add-to-list 'initial-frame-alist '(fullscreen . fullboth))
 
