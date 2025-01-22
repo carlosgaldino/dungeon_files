@@ -171,6 +171,7 @@
       :new-connection (lsp-stdio-connection "zls --config-path /Users/carlosgaldino/zls.json")
       :major-modes '(zig-mode)
       :server-id 'zls))))
+(setq lsp-zig-zls-executable "/opt/homebrew/bin/zls")
 
 (after! beancount
   (setq-default lsp-beancount-langserver-executable "beancount-language-server"))
