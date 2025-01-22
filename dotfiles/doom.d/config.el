@@ -147,6 +147,14 @@
   (lsp-ui-sideline-show-diagnostics nil))
 (use-package! magit
   :hook (magit-mode . magit-delta-mode))
+(use-package! magit-todos
+  :after magit
+  :config
+  (magit-todos-mode 1))
+;; (define-key magit-todos-section-map "j" nil))
+(map! :desc "List project todos"
+      :leader
+      "p t" #'magit-todos-list)
 (use-package! tree-sitter
   :custom
   (tree-sitter-syntax-highlight-enable t)

@@ -14,6 +14,8 @@
 (package! kaolin-themes)
 (package! literate-calc-mode)
 (package! magit-delta)
+(package! magit-todos)
+(package! pcre2el)
 (package! protobuf-mode)
 (package! svelte-mode)
 (package! zig-mode)
