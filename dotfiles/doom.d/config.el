@@ -179,7 +179,9 @@
   (setq ccls-initialization-options '(:index (:comments 2) :completion (:detailedLabel t)))
   (set-lsp-priority! 'ccls 2)) ; optional as ccls is the default in Doom
 (after! deft
-  (setq deft-default-extension "md"))
+  (setq deft-default-extension "md")
+  (setq deft-recursive t)
+  (setq deft-use-filename-as-title t))
 (after! disaster
   (setq disaster-cc "clang")
   (setq disaster-cflags "-Wall -std=c23"))
