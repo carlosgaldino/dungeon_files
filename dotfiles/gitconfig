@@ -1,10 +1,10 @@
 [user]
-	name = Carlos Galdino
-	email = carloshsgaldino@gmail.com
+  name = Carlos Galdino
+  email = carloshsgaldino@gmail.com
 [color]
   ui = auto
 [core]
-	excludesfile = /Users/carlosgaldino/.gitignore
+  excludesfile = ~/.gitignore
   editor = vim
   pager = delta --paging 'always' --syntax-theme='Sublime Snazzy'
 [interactive]
@@ -50,16 +50,16 @@
 
   showless = "!sh -c 'git show --color=always $@ | less -R' -"
 [github]
-	user = carlosgaldino
+  user = carlosgaldino
 [push]
-	default = simple
+  default = simple
 
 [init]
-	defaultBranch = main
+  defaultBranch = main
 [pull]
-	ff = only
+  ff = only
 
 [includeIf "gitdir:~/code/**/work/**"]
-    path = ~/code/work/.gitconfig
+  path = ~/code/work/.gitconfig
 [rerere]
-	enabled = true
+  enabled = true
