@@ -63,3 +63,16 @@
   path = ~/code/work/.gitconfig
 [rerere]
   enabled = true
+  autoupdate = true
+[branch]
+  sort = committerdate
+[column]
+  ui = auto
+[tag]
+  sort = version:refname
+[merge]
+  conflictstyle = zdiff3
+[help]
+  autocorrect = prompt
+[diff]
+  algorithm = histogram
