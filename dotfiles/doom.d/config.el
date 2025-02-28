@@ -236,6 +236,10 @@
 (add-hook 'copilot-mode-hook #'copilot-mode-line)
 (add-hook 'html-mode-hook '(lambda () (setq-local apheleia-inhibit t)))
 (add-hook 'web-mode-hook '(lambda () (setq-local apheleia-inhibit t)))
+;; only for kaolin-mono-dark
+(custom-set-faces
+ '(minimap-active-region-background ((t (:background "#25352D"))))
+ '(minimap-current-line-face ((t (:background "#68f3ca")))))
 
 ;; (use-package! zone)
 ;; (zone-when-idle 300)
