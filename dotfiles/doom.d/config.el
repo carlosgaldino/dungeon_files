@@ -198,7 +198,8 @@
 (after! lsp
   (setq lsp-headerline-breadcrumb-enable t)
   (setq lsp-headerline-breadcrumb-enable-diagnostics nil)
-  (setq lsp-lens-enable nil))
+  (setq lsp-lens-enable nil)
+  (setq lsp-completion-enable nil))
 ;; (setq lsp-inlay-hint-enable t))
 (after! rustic
   (setq rustic-cargo-check-arguments "--workspace --all-targets")
