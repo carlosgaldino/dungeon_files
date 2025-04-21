@@ -43,7 +43,7 @@ brew "vim"
 brew "zig"
 brew "zls"
 
-brew "d12frosted/emacs-plus/emacs-plus", args: ["with-imagemagick", "with-modern-doom-icon", "with-native-comp", "with-poll"]
+brew "d12frosted/emacs-plus/emacs-plus", args: ["with-imagemagick", "with-modern-doom-icon"]
 brew "oven-sh/bun/bun"
 
 cask "amethyst"
